@@ -1,8 +1,6 @@
-# Task Distribution
+# Epics
 
-## Epics
-
-### Level Design
+## Level Design - `epic/level-design`
 
 - Level Design
 - Tilemapping
@@ -16,7 +14,7 @@
 - Scoring
     - Implement a balanced scoring system
 
-### Django Backend
+## Django Backend - `epic/django-backend`
 
 - Setup Django app
 - Setup Models
@@ -26,7 +24,7 @@
     - PlayerSave
 - Authentication
 
-### UI Design
+## UI Design - `epic/ui-design`
 
 - Splash Screen / Title Screen
 - Login Screen
@@ -35,7 +33,7 @@
 - Potentially make speeder level between caves (multiple small areas to progress thru in first level)
 - Respawn / Restarting / Game Over screens
 
-### Entities
+## Player - `epic/player`
 
 - Create Player
     - Player Health
@@ -45,8 +43,9 @@
     - Movement
     - Shooting
 
+## Enemy - `epic/enemy`
+
 - Create Enemies
-    - Enemy Character Dev
     - Patrol
     - Shoot
     - Animations
@@ -55,10 +54,10 @@
 
 **Matt will break out documentation and presentation tasks**
 
-## Matt
+## Matt - DB and UI
 
-## Keimon
+## Keimon - Player
 
-## Zach
+## Zach - Level
 
-## Jeremiah
+## Jeremiah - Enemy
