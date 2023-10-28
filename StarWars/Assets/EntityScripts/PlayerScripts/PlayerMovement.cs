@@ -11,24 +11,36 @@ public class PlayerMovement : MonoBehaviour
     public float horizontal;
 
     public bool jump;
+
+    public bool crouch;
+    
     void Update()
     {
-      
 
-        
+
+
         
         horizontal = Input.GetAxisRaw("Horizontal") * speed;
-
+        
         
 
-        if (Input.GetKey(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.Z)) {
             jump = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            crouch = true;
+        }
+        else if(Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            crouch = false;
         }
     }
 
     void FixedUpdate()
     {
-        contoller.Move(horizontal * Time.fixedDeltaTime,false, jump);
+        contoller.Move(horizontal * Time.fixedDeltaTime,crouch, jump);
         jump = false;
     }
 }
