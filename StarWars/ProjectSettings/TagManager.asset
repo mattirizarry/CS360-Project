@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Trap
+  - EnemyDamage
+  - PlayerDamage
   layers:
   - Default
   - TransparentFX
@@ -38,6 +41,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: background
+    uniqueID: 711240385
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: terrain
+    uniqueID: 2662148663
     locked: 0
