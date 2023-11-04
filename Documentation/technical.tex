@@ -27,8 +27,8 @@
 
        \vspace{0.5cm}
        \Large
-       Sprint 1\\
-       September 7th, 2023 \\
+       Sprint 3\\
+       November 3rd, 2023 \\
    \end{center}
 
        \vspace{1.5cm}
@@ -180,6 +180,23 @@ In addition to the login system, the client has requested that the state of the 
 
 The splash screen will display an appropriately themed backdrop image when the user launches the game. The splash screen will also function as a highscore display and a login screen.
 
+For sprint two, we did end up adding a few functional requirements to the project. 
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|}
+\hline
+\textbf{New Functional Requirements} \\ \hline
+Entity Collision\\ \hline
+Level design\\ \hline
+Power ups/health orbs \\ \hline
+Audio and Visuals\\ \hline
+Scoring and Progression\\ \hline
+Restart and Respawn handling\\ \hline
+Game Over / Level complete conditions\\ \hline
+\end{tabular}
+\end{table}
+
 
 %---------------------------End Functional Requirements----------------------------------------------
 
@@ -215,8 +232,22 @@ As well as needing to make the game able to run at a good enough speed that the 
 
 Another non-functional requirement to be sure we implement is button layout and good feeling controls. What I mean by this is that something that is overlooked until it becomes an issue is the use of buttons and their corresponding actions. For example most games use the space bar or A for xbox, X for playstation, for the simple jump mechanic. Generally depending on the console or system of play the name of the button can change but games released for the system will stick to this button. The reason for this is because most people prefer certain buttons to perform certain actions and a jump mechanic being put as these buttons have no backlash from players. But if one were to put the jump button in an awkward position the user would not be happy. This issue can even become worse if all the buttons are placed awkwardly and in non-user friendly positions. 
 
-The last non-functional requirement to talk about is about the presentation of the game, or in other words the visuals of said project. We need to ensure that the visuals we use are clearly visible for the player as well as not painful on the eyes. For example if everything is too cluttered or if the visuals just look poor overall the player will have a hard time enjoying the game. This can even make it difficult to play if the visuals are not properly thought out.
+The last non-functional requirement to talk about is about the presentation of the game, or in other words the visuals of said project. We need to ensure that the visuals we use are clearly visible for the player as well as not painful on the eyes. For example if everything is too cluttered or if the visuals just look poor overall the player will have a hard time enjoying the game. This can even make it difficult to play if the visuals are not properly thought out. 
 
+For sprint 2, we did also have to add some new non-functional requirements. First we must make sure the ai has a good feel to it. By making sure that the ai feels like it is an actual decent challenge. Not walking into walls or walking off ledges to their doom, or aimlessly wandering throughout the map leaving the user disconnected from the gameplay. 
+
+Next, we want the items and drops to be balanced. It shouldn't heal to little or too much, but it should heal just the right amount to be challenging but playable. Finally, we must make sure that the animations are clean and fun!
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|}
+\hline
+\textbf{New Functional Requirements} \\ \hline
+Quality Enemy AI\\ \hline
+Balanced Items\\ \hline
+Clean Animations \\ \hline
+\end{tabular}
+\end{table}
 
 
 %---------------------------End Non-Functional Requirements---------------------------------------
@@ -293,33 +324,26 @@ The Unity software has many tools that we can use within it to code certain func
 \subsubsection{Physical}
 %150 words minimum
 % Describe the Physical System Boundaries.
-Text goes here.
+The physical system boundary similarly defines a scope of functions and actions and how they relate to each other. In this case, however, we are analyzing how the systems contribute to the physical hardware of the client. In this example, when looking at the visual aspect of the development we have to use Unity’s various visual aid systems like the animation system, scene manager, and UI engine to send data to the client’s monitor. Similarly, when taking player input we rely on the user's controller and keyboard to send requests to the input manager to do various things like move the character using Unity’s built-in physics system or to control and navigate through the UI. There are other examples of physical hardware interaction with the software with the Unity Engine, but I only noted the most important features that would be the most occurring in the game. 
 
-%uncomment the section below when you're ready to insert an image
-%\begin{figure}[h!]
-%    \centering
-%    \includegraphics[width=1\textwidth]{images/picture_of_Physical_boundaries.png}
-%    \caption{Description of the image here.}
-%    \label{phy_boundaries}
-%\end{figure}
-
-
-
-
-
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/physbound.jpg}
+    \caption{Physical Boundaries}
+    \label{phy_boundaries}
+\end{figure}
 
 \subsubsection{Logical}
 %150 words minimum
 % Describe the Logical System Boundaries.
-Text goes here.
+The logical system boundary defines a scope of functions and actions and how they relate to each other. This is often represented in a diagram that has the various systems and functions and how they connect from front-end to back-end. The outside of the box represents the front-end and the back-end which in this case is the user and their machine and the back end is the database manager. The inside of the diagram represents various libraries and systems that help the front-end and back-end communicate and perform many different actions. Additionally, the inside also includes annotation labels to show how exactly different systems and/or actions connect. To explain the diagram above, we have a user who wants to send their user account and their game state data to the database where the admin can modify the data. Moreover, we have the player using the player and input manager classes to influence game state data being sent to the database.
 
-%uncomment the section below when you're ready to insert an image
-%\begin{figure}[h!]
-%    \centering
-%    \includegraphics[width=1\textwidth]{images/picture_of_Logical_boundaries.png}
-%    \caption{Description of the image here.}
-%    \label{log_boundaries}
-%\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/logbound.png}
+    \caption{Logical Boundaries}
+    \label{log_boundaries}
+\end{figure}
 
 %---------------------------End System Boundaries------------------------------
 
@@ -334,7 +358,7 @@ Text goes here.
 %uncomment the section below when you're ready to insert an image
 %\begin{figure}[h!]
 %    \centering
-%    \includegraphics[width=1\textwidth]{images/picture_of_storyboard.png}
+%    \includegraphics[width=0.5\textwidth]{images/picture_of_storyboard.png}
 %    \caption{Description of the image here.}
 %    \label{storyboard}
 %\end{figure}
@@ -352,15 +376,35 @@ Text goes here.
 %	Title for each Class Diagram
 %	Description of how and why each class is used
 %	Mapping to source code (in the Appendix, specific files and line numbers) of where it’s used.
-Text goes here.
+For the Creational Object Oriented Design Pattern our project will be implementing the Factory pattern. The factory pattern provides a generic interface for creating objects and upon creation attributes are assigned to the generated object. In this project the Factory pattern will be used to solve the problem of creating multiple types of non-player character enemies by basing multiple NPC enemy classes on one main enemy interface. This design pattern is applicable because each enemy NPC will have differing health and damage amounts as well as different skins.
+
+The Behavioral Object Oriented Design Pattern this project will apply is the state design pattern. The state pattern diagram allows an object to change the behavior based on state changes. This diagram covers the states of an enemy NPC which includes the Patrol, Attack, Damaged, and Dead states. This allows us to implement behaviors as a collection of self-contained components and will cause a reduction in condition code blocks in the project. This pattern is applicable to this class because enemy NPCs have different behavior states which can be easily encapsulated and organized via this design pattern.
+
+The Structural Object Oriented Design Pattern this project will implement is the Decorator design pattern. The decorator design pattern is used to attach additional functionalities/responsibilities to an object dynamically - allowing for classes to be open for extension but closed for modification. In the project, the decorator pattern is applied to health orb power-ups that the player character can collect. The health orbs have different skins and heal the player for different amounts based on which variant is collected. This pattern is applicable as it allows for the health orb interface to be dynamically applied to a variety of health-orb powerups.
+
 
 %uncomment the section below when you're ready to insert an image
-%\begin{figure}[h!]
-%    \centering
-%    \includegraphics[width=1\textwidth]{images/class_diagram.png}
-%    \caption{Description of the image here.}
-%    \label{class_diagram}
-%\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/oo/decorator.png}
+    \caption{Decorator Diagram}
+    \label{decorator_diagram}
+\end{figure}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/oo/factory.png}
+    \caption{Factory Diagram}
+    \label{fac_diag}
+\end{figure}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/oo/stateood.png}
+    \caption{Model of EnemyStates}
+    \label{enem_diag}
+\end{figure}
+
 
 
 \subsubsection{Use Case Diagrams}
@@ -369,15 +413,15 @@ Text goes here.
 %	Title for each Use Case Diagram
 %	A description of information given in the diagram.
 %	Mapping to source code (in the Appendix, specific files and line numbers) of where it’s used.
-Text goes here.
+This use case diagram maps the higher level functionalities of the game, such as loading, saving, user input, and the user accounts functionality. This diagram will be really beneficial to us when we start breaking out issues into smaller tasks, and will likely serve as the foundation for our "epics," or overarching themes of an issue set. 
 
 %uncomment the section below when you're ready to insert an image
-%\begin{figure}[h!]
-%    \centering
-%    \includegraphics[width=1\textwidth]{images/use_case_diagram.png}
-%    \caption{Description of the image here.}
-%    \label{use_case_diagram}
-%\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/usecase.png}
+    \caption{Use case diagram}
+    \label{use_case_scenario}
+\end{figure}
 
 
 \subsubsection{Use Case Scenarios Developed from Use Case Diagrams (Primary, Secondary)}
@@ -386,16 +430,53 @@ Text goes here.
 %	Title for each Use Case Scenario
 %	A short description of the information given in the scenario.
 %	Mapping to source code (in the Appendix, specific files and line numbers) of where it’s used
-Text goes here.
 
-%uncomment the section below when you're ready to insert an image
-%\begin{figure}[h!]
-%    \centering
-%    \includegraphics[width=1\textwidth]{images/use_case_scenario.png}
-%    \caption{Description of the image here.}
-%    \label{use_case_scenario}
-%\end{figure}
+\subsubsection{Use Case Scenario 1 (Based On 1st Use Case Diagram)}
 
+ACTORS:
+USER
+COLLISION HANDLER
+
+GOAL:
+To detect collisions between different game objects that either player-owned or enemy entity game objects
+
+SYSTEMS:
+PHYSICS ENGINE
+ENTITY TRANSFORM
+COLLIDER
+
+This scenario depicts how the user will interact with the physics engine in order to detect collectable items or enemies. This can be further applied to other objects like boost pads and hitbox detection for the speeder level.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{firstuse.png}
+    \caption{This use case diagram shows the relationship between the User actor and the collision handler. The actor will do actions such as doing damage to an enemy or using a jump pad which all use colliders and the collision handler will manage and send data back to the user.}
+    \label{firstuse}
+\end{figure}
+
+\subsubsection{Use Case Scenario 2 (Based On 2ND Use Case Diagram)}
+
+ACTORS:
+GAMEMANAGER
+ENTITY CLASS
+
+GOAL:
+To Allow the game manager to handle the spawning and despawning of entity objects through the entity class
+
+SYSTEMS:
+UNITY CLASS SYSTEM
+ENTITY TRANSFORM
+
+The scenario depicts the interaction  between the entity class and the game manager. The game manager will handle any level specific interactions like spawning and collectable placement.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{seconduse.png}
+    \caption{In this use case, we see the game manager as an actor and how it interacts with the entity class. The game manager when an event like an enemy dying or the player enters a zone will call functions from the entity class to spawn or despawn enemies.}
+    \label{seconduse}
+\end{figure}
 
 \subsubsection{Sequence Diagrams}
 %Each diagram should include all actors/resources to cover one Use Case Scenario.
@@ -403,15 +484,15 @@ Text goes here.
 %	Title for each Sequence Diagram
 %	A short description of the information given in the diagram.
 %	Mapping to source code (in the Appendix, specific files and line numbers) of where it’s used
-Text goes here.
+The diagram above describes how we intend on implementing our authentication flow. We recognize that there may be additional steps necessary as we move down the line, but it is pretty straightforward. User will click the login button, which will take them to the login screen. Another way to do this is to just load the login screen first thing to the user, but I digress. After the user fills out the form, then the form is validated. Once we do this, we will compare the password to the one that is stored in the database and return a response to the user. Once the user is logged in, they will then be able to go to the main menu.
 
 %uncomment the section below when you're ready to insert an image
-%\begin{figure}[h!]
-%    \centering
-%    \includegraphics[width=1\textwidth]{images/use_case_scenario.png}
-%    \caption{Description of the image here.}
-%    \label{use_case_scenario}
-%\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/sequence.png}
+    \caption{Auth Flow Sequence Diagram}
+    \label{auth_flow_diagram}
+\end{figure}
 
 \subsubsection{State Diagrams}
 %Each diagram should identify the object/resource/asset (in the title of the diagram) and display all states and actions/events that create state changes.
@@ -419,15 +500,14 @@ Text goes here.
 %	Title for each State Diagram
 %	A short description of the information given in the diagram
 %	Mapping to source code (in the Appendix, specific files and line numbers) of where it’s used
-Text goes here.
+This diagram describes how the user will press certain buttons to control their characters. It is a pretty straightforward diagram, and most modern games will follow a similar style of implementation. The only thing that could be improved is that instead of giving a hardcoded key value combination, it could be an enum instead. This shows that we are thinking ahead to user control customization.
 
-%uncomment the section below when you're ready to insert an image
-%\begin{figure}[h!]
-%    \centering
-%    \includegraphics[width=1\textwidth]{images/state_diagram.png}
-%    \caption{Description of the image here.}
-%    \label{state_diagram}
-%\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/oo/state.png}
+    \caption{State Diagram for PC Movement}
+    \label{class_diagram}
+\end{figure}
 
 \subsubsection{Component Diagrams}
 %Single diagram that defines component APIs and communication pathways for all software and dependencies used in the product.
@@ -436,15 +516,15 @@ Text goes here.
 %	A description of the information given in the diagram
 %	Protocols used for each communication pathway
 %	Mapping to all source code and dependency software (in the Appendix, specific files)
-Text goes here.
 
-%uncomment the section below when you're ready to insert an image
-%\begin{figure}[h!]
-%    \centering
-%    \includegraphics[width=1\textwidth]{images/component_diagram.png}
-%    \caption{Description of the image here.}
-%    \label{component_diagram}
-%\end{figure}
+This component diagram represents how the data models will be broken up, and how they will communicate with the database as a whole. The web server will be responsible for handling the interactions between the models and the database.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/component.png}
+    \caption{High Level Database Model}
+    \label{db_diagram}
+\end{figure}
 
 \subsubsection{Deployment Diagrams}
 %Single diagram that defines the physical nodes, virtual nodes, and communication for all software related to the product.  Should be an extension of the Component Diagram.
@@ -453,15 +533,29 @@ Text goes here.
 %	A description of the information given in the diagram
 %	Identify all physical and virtual nodes used for process execution
 %	Identify all internal and external node communication
-Text goes here.
 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/deployment.png}
+    \caption{Deployment Diagram}
+    \label{deployment_diagram}
+\end{figure}
 %uncomment the section below when you're ready to insert an image
 %\begin{figure}[h!]
 %    \centering
-%    \includegraphics[width=1\textwidth]{images/deployment_diagram.png}
+%    \includegraphics[width=0.5\textwidth]{images/deployment_diagram.png}
 %    \caption{Description of the image here.}
 %    \label{deployment_diagram}
 %\end{figure}
+
+\subsection{Traceability Table}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/trace.png}
+    \caption{Traceability Table}
+    \label{Traceability}
+\end{figure}
 
 
 %---------------------------End Unified Modeling Language----------------------------------
@@ -472,18 +566,19 @@ Text goes here.
 \subsection{Version Control}
 %200 words minimum
 %Describe your group's approach to version control.  Include details on how and when you make commits to GitHub.  Explain version naming, branching, and integration approaches.
-Text goes here.
+
+Our approach to version control is to use GitHub as our single source of truth for everything related to our project. This allows us to have control and consistency over our project management and codebase at all times. Moreover, it is also beneficial for keeping separate branches, thus always being able to have something presentable for the client. 
+
+As far as when we make commits to GitHub, we haven't made too many commits other than to store files such as our organization.tex and technical.tex, but we plan to make commits to our GitHub anytime that we make changes to the codebase of our upcoming Unity project. The way we will be doing so will adopt a master <- develop <- feature hierarchy, in that all changes will be first made in a feature branch, and then merged into the develop branch. This is where we will QA new features and PRs. Once they have passed the QA and testing stage, we will merge into our main branch.
+
+As far as keeping track of issues, we have decided to adopt the Epic <- User Story <- Feature / Bug model of issues. This allows us to make higher level goals (epics), break them into medium sized bodies of work (stories), and then break those up into bite size pieces of work (feature / bugs). This allows us more granular insight into how our project is moving along relative to the timeline of our sprints. 
 
 
 %---------------------------End Version Control------------------------------------------------
 
 % No text here.
 
-%---------------------------Data Dictionary------------------------------------------------
-\subsection{Data Dictionary}
-%200 words minimum and table
-%	Create a table that displays your Data Dictionary and describe how it is being used to define data structures and other major variables/elements in the software product.
-Text and table goes here.
+
 
 
 %---------------------------End Data Dictionary------------------------------------------------
@@ -497,12 +592,19 @@ Text and table goes here.
 \subsubsection{Gameplay Diagram}
 %150 words minimum
 %Also called a controlled flow graph.  Insert an image of the gameplay diagram and describe the diagram in detail.
-Text goes here.
+This section of the document will talk about a gameplay flowchart and describe it. As one can see in the diagram the base of the flowchart is that the player is moving through the level. We have multiple things that can appear. For instance if there is an enemy. If there is one they can shoot or avoid said enemy. Then they see if there is an obstacle or a gap in the platform. If it is a yes they jump over said obstacle or gap. If not they keep moving forward. There is also a part that says was an item picked up and if one was an effect is applied based on what the item was. If not the player gains nothing and keeps moving. And finally a check on if the player has died. If yes they restart the level if they have an extra life or they get a game over if they do not have an extra life. If they don't die they keep playing. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/gameplaydiagram.png}
+    \caption{Gameplay Diagram}
+    \label{gameplaydiagram}
+\end{figure}
 
 %uncomment the section below when you're ready to insert an image
 %\begin{figure}[h!]
 %    \centering
-%    \includegraphics[width=1\textwidth]{images/gameplay_diagram.png}
+%    \includegraphics[width=0.5\textwidth]{images/gameplay_diagram.png}
 %    \caption{Description of the image here.}
 %    \label{gameplay_diagram}
 %\end{figure}
@@ -510,50 +612,54 @@ Text goes here.
 \subsubsection{Gameplay Objectives}
 %150 words minimum
 %Should explain why someone should play your game. Should define the goals of your game.
-Text goes here.
+This section will talk about the gameplay objectives, which will be about the goal that the player is striving for. As well as talking about why someone should play this game. To start off I would like to discuss why someone should play our game. I feel that people should play our game because it is a fun platformer that takes place in the Star Wars universe. In this game you play as the famous character Luke Skywalker as he attempts to save the galaxy. Another thing is that this story allows the player to play through the same story from the movies which allows the player to live through the story from a more interactive place.
+
+The overall goal of the game is like that from the movies. You are trying to defeat Darth Vader and save the galaxy from the Empire. How you will do this is that you will have to dodge, fight, and avoid enemies of each level. Ultimately making it to the end of said level and moving on to the next. You will also have to traverse through dangerous spikes and other environmental dangers.
+
 
 \subsubsection{User Skillset}
 %150 words minimum
 %Describe the abilities a user should have in order to interact with the software: Screen tapping, Memorization, Puzzle, solving, Strategy development, Quick reflexes 
-Text goes here.
+This section will discuss the user skillset. This means this section will be about the necessary user abilities necessary to effectively play this game. One of the most important skills the player should have is that they will need to have quick reflexes. This game will have enemies attacking you as you try to platform. If you are unable to react quick enough you will get killed many times by the enemies. Another necessary skill the user should have is timing. The reason for this is that you will need to know when to hit the jump button to make it to another platform, as well as when it is okay to attack the enemy back as if you try and do it at the wrong time you will get hit by an enemy blaster. The player will also need to effectively use the keyboard as if they do not know where keys are or are not used to keyboard controls they might not be able to perform the required actions effectively.
 
 \subsubsection{Gameplay mechanics}
 %150 words minimum
 %Thorough guide of the game rules: Turn-based, Random chances, Capturing/eliminating, Time-based, Team-based
-Text goes here.
+This section will be about the game mechanics for this game. The mechanics that this game is based on are platformer mechanics and a bit of some run and gun. The platformer part comes from the fact that you are tasked with getting to the end of the level all the while you avoid terrain dangers and enemies. You will jump between different platforms and try your best to not fall off or be killed by the previously explained dangers. This is where a bit of the run and gun comes from. The player will have a weapon to defend yourself and beat the enemies as you traverse the level. The player will be able to shoot their blaster at the enemies and at some point will have a lightsaber to attack as well. As well as looking out for life orbs to heal the player after getting hurt by something or even getting an extra life. The overall package being that you will run, jump, crouch behind cover, shoot, slice with your lightsaber, and pick up helpful items to help you get through the game.
 
 \subsubsection{Gameplay Items}
 %150 words minimum
 %This section of the GDD refers to smaller elements of the game, such as: Health/power-ups, Coins, Loot crates, Weapons/character upgrades, Etc. Changes gameplay elements as the player progresses through the game.
-Text goes here.
+This section of the document will involve the gameplay items. This entails the smaller components of our game that will slightly change the flow of the game as it is played. The first gameplay item that will be discussed will be the small health orb. The small health orb will recover the player’s health by a small margin. This won’t be a whole lot of health but this will allow the player to survive a few more hits and help them out when they are in a pinch. An item that is like the first but better would be the large health orb as this item will greatly recover the players health. Meaning that they could be on the brink of death and after picking up a large health orb they are doing okay, and are now able to take a few more risks. Another item would be the extra life as this will allow the player to make a mistake and have another chance at completing the level before a game over takes place. 
 
 \subsubsection{Gameplay Challenges}
 %150 words minimum
 %Description of game challenges as a player progresses. Identify how a player handles difficulties and ensures the player can obtain essential tools to continue progressing through the game.
-Text goes here.
+This section will discuss the gameplay challenges of our game. This will entail the challenges a player is expected to face as well as how they are expected to get past said challenges. For the challenges that the player is going to come up against it will be against dangerous terrain and enemies. For the terrain it can be spikes, falling objects, and even bottomless falls. The player will be expected to learn the patterns for falling objects through some observation and thought out movement. We will also ensure that the placement of said objects are fair. For the spikes and bottomless pits the player will handle these through well placed jumps and observations. We will also ensure placement of these things are fair as well. For the enemies the player will have to deal with these by using their wits and the weapons they are supplied to deal with them. For instance the player can duck to evade a blaster or they can jump. Based on the environment will depend on what works better for the current instance as well. We will ensure that the enemies are well placed throughout the level. 
 
 \subsubsection{Gameplay Menu Screens}
 %150 words minimum and wireframes
 %Game start menu screen, pause menu screen, game over screen
 %Give wireframe/drawing/image for all menus in the game.
-Text goes here.
+This section will go through the menu screens that will be seen in this game. The first screen that you will find when you enter the game will be the login/signup screen. These will be found on the left side of the screen as the star wars logo is shown on the right. After logging in you will see the main menu screen which will have your account on the upper left part of the screen and the high scores on the right. Under the account info you will find a load game, new game, settings, and controls button. Clicking the load game button will take you to a menu that will have all the loads that are owned by your account and each will have a resume button. The new game will just start the game and you will start to play. The settings function will take you to a menu that will allow you to change certain aspects of the game. The controls button will take you to a menu that will allow you to change your button layout and allow the player to change what button does what. While playing in the game if you press a certain button you will be taken to a pause menu which will allow the player to save the game, quit, or resume. Quitting will then take you back to the main menu screen.
 
 \subsubsection{Gameplay Heads-Up Display}
 %150 words minimum and wireframes
 %Current Game information visually relayed to the player as a part of the game’s user interface.
 %HUD features are generally static, on-screen so they remain visible during gameplay. Health/Lives, Time, Weapons/Ammo, Capabilities, Menus, Mini-Map, Score, etc.
-Text goes here.
+This section will talk about the heads up display that will be in the game. This generally entails life bars, scores, and anything that is on the screen that the player uses to understand the current game state. For our game we will have three different displays, and these displays will be a life bar, a score, and extra life counter. These can be seen in the diagram but to explain a bit more in depth is that the life bar will be vertical and will be in the left upper corner. For the extra life counter we will put it in the right upper corner of the screen and it will display a small sprite of the player's character with a number beside it. This number will signify the amount of lives the player currently has left. For the score it will be placed in the bottom right of the screen and this will show the current score that the player has.
 
 \subsubsection{Gameplay Art Style}
 %100 words minimum
 %describe the visual appearance of characters, objects, and other in-game elements. (Realistic, Cartoon, etc.)
-Text goes here.
+In this section of the documentation the art style of the game will be the topic of discussion. The art style that was chosen for this game was the use of pixel art. This is an art style that reflects the older days of gaming but can still look very good when everything is well detailed. This means all in-game things will have a more cartoon look to it. Every character will have a decently detailed sprite using this pixel art. As well as the scenery and menus. The terrain and scenery will have one sprite and not change its look. The enemies and characters though will use multiple sprites so that all their actions can be well animated. For any cutscenes even though the pixel art style is being used it will have a cartoon look to it but characters will look close to what is seen in the movies.
+
 
 
 \subsubsection{Gameplay Audio}
 %150 words minimum
 %Description of all game audio: Character sound/voices, Ambient world sounds, Background music, etc.
-Text goes here.
+This section of the document will talk about the gameplay audio. This will entail any sounds that the player will hear while playing the game. First thing will be damage noises and death sounds. These will be played when the player is hit or when an enemy is hit and these will be unique. The same goes for the death sounds as both the player and enemies will have a unique death sound. These will be auditory cues to help the player identify if an enemy has died and who has taken a hit. Another important audio feature that will be included will be the background music. The plan for this is to be engaging but not overbearing. As its name implies it is for background noise. This music will be something that relates to the Star Wars franchise. Basically it will be music that is from Star Wars. Another piece of audio that will be played will be a sound that will go over top of the player's gun. Whenever the player shoots it will play a quick sound. Finally item pick ups will have a confirmation jingle. Basically on pick they will play a sound that will inform the player it was successfully picked up.
 
 
 
@@ -578,18 +684,41 @@ Text goes here.
 \subsubsection{Approach to Security in all Process Steps}
 %250 words minimum
 %Describe how your team modified the original technical document to address security issues in the Requirements, Modeling and Design, and Implementation sections.
-Text goes here.
+
+When considering security in a game, there are a couple of ways to do so. First, what can the client change about their game? Can they make their player move in ways they should not be able to? Can they glitch through parts of the level? Can they cheat and get an unrealistic high score? These are client side risks, that are generally a concern in games that are singleplayer. Yes, this game is single player, but basically everything other than the actual gameplay itself must be authenticated on the Django game server.
+
+When a user logs in, the game will store their credentials (JWT key) for future use. Whenever a user wants to perform any action such as changing their settings, saving or loading a level, or logging in, they MUST provide credentials or the Django server will decline the request. 
+
+We perform our API requests using the System.Net.Http class provided by C\#. This ensures that our requests are done via HTTPS, which will automatically encrypt any data that is sent over it. Finally, Django also has safeguards in place for common attacks such as CSRF forging, XSS, and more. Choosing Django has allowed us to already have security features such as securely storing user passwords via hashing. Moreover, it allows us to extend these default user attributes and add some of our own. This helps by making it easier for us to implement user data, and it does so more securely as we are not trying to implement hashing ourselves. Doing this removes a possible avenue for attack.
+
+Overall, we are really happy with the security of our product. I am sure there are plenty more things we should be doing, but for now this is a good start.
 
 
 \subsubsection{Security Threat Model}
 %200 words minimum and Security Threat Model
 %Create and add a Security Threat Model, related to the Deployment Diagram, that identifies trust boundaries and potential security risks
-Text goes here.
+
+Our security threat model has three areas: 1. the User, 2. the Game server, 3. the database. The boundary between the user and the game server is one that can only be accessed with user credentials. Even then, they only have access to modify their own data, no one else. The boundary between the game server and the database is a more touchy one especially if we were directly interacting with the database instead of using a web framework like Django. This removes risks such as SQL injection because we never make a SQL call to the database, we only interact with the data via models in Python. 
+
+The biggest risk would be if somehow a Django secret key got leaked after production, and people were able to spoof API requests to a phony Django server. However, this is not easily done, and can be easily mitigated by using environment variables for any secret keys. This way, your repository never stores any sensitive data.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/threat.png}
+    \caption{Enter Caption}
+    \label{fig:Security-threat}
+\end{figure}
 
 \subsubsection{Security Levels}
 %250 words minimum
 %Describe the different security levels for general users and administrators.  Also describe the authentication/authorization techniques for users of the software product.
-Text goes here
+
+In security, you should follow the practice of give NO permissions by default, and give only the ones that are required. So, we are going to follow this rule.
+Default users will not even have access to the Django admin panel what so ever. They can only use the UI provided in the game to update their data such as settings, saves, user data, and more. 
+
+In contrast, the admin user will have full destructive access over the database and app itself. The admin will have access to add / remove high scores, add / remove user saves, delete users, and everything an admin should have access to. If we were handing this off to an end user, we would likely not give them full access, but just the permissions they would need. This removes the risk of having a careless manager who leaks their admin credentials, and minimizes the would be damages. 
+
+The way that a user is authenticated is by sending a POST request to cs360.irizarry.dev/accounts/login and if the login is successful, it will return a user object with the user credentials in it. The credentials are stored and then will be used in subsequent requests that require authentication. The app also supports /accounts/register.
 
 %---------------------------End Product Security-------------------------------------------------
 
@@ -603,35 +732,100 @@ Text goes here
 \subsubsection{Product Performance Requirements}
 %200 words minimum and list of performance non-functional requirements.
 %Define and justify performance requirements.  These should be added to the list of non-functional requirements.
-Text goes here.
+The performance requirements should be set to ensure a smooth and satisfying user experience. If the performance of a product is not adequate for a consistent and fluid user experience then users will be unsatisfied and will not want to utilize the software. 
+
+Our target hardware is one of the team member’s laptops, which has an AMD Ryzen 7 processor with an integrated graphics card and 16GB RAM, this should be more than sufficient for this project. For this product, we will track frames per second (FPS), CPU time, memory usage, duration of method calls, and time elapsed on database calls. The aim is to maintain a high frame rate (FPS) at equal or greater than 60 frames per second. The target CPU time for gameplay is less than 16ms. It should be acknowledged that at the lower end of the spectrum relative standard deviation is a faulty metric because even a change of a couple ms can drastically increase this measurement; as such this measurement will only be considered as performance approaches the minimum requirements. It is essential that our database operations be quick to ensure a positive user experience; therefore, database operations such as user authentication and save/load game states should take a maximum of 2 seconds. Finally, the game should be very responsive to user inputs and should respond to user input within 50 milliseconds, for this method calls will be observed for their duration. As development continues requirements will be set to set limits on scene switching times, throughput, load testing, and stress testing.
+
+By keeping defining the performance requirements before development, it helps ensure that the development process will result in a good product. Additionally, it is important to measure and track these requirements throughout development so that mistakes or low performance can be caught and remediated. 
+
 
 \subsubsection{Measurable Performance Objectives}
 %200 minimum words and list of objectives.
 %Measurable Performance Objectives should be stated in this section that relate to the performance requirements.
-Text goes here.
+To adequately meet product performance requirements it is essential that performance be measured throughout development. Measuring performance allows the team to monitor defined metrics and find bottlenecks and correct them. To track the gameplay metrics of FPS, CPU Time, and memory usage the team created an empty game object named ‘pTest’ and placed it in the scene. A script was then attached to ‘pTest’ which outputs the CPU time, FPS, and memory usage to a .log file every frame. As stated above the goals of 60 FPS, a maximum of 16 ms CPU time, and less than 2 GB memory usage have been set to ensure a smooth user experience. The goal for CPU time is 16ms or less, but the target is really consistent performance meaning the game should avoid major spikes in CPU usage. Relative standard deviation of CPU time should be kept under 5-10\%, particularly as CPU time approaches 16ms. Currently it is not possible to implement testing for scene loading time because the game currently has only one scene implemented and no menus to load from. Stress and load testing are also not very feasible given our limited implementation, but these requirements will be set and tested as development progress is made.
 
 \subsubsection{Application Workload}
 %250 words minimum
 %Application Workload information should be gathered and visualized in this section.  This generally requires historical data on how the software product is being used.  For example, users generally spend 10% of the time interacting with menus, 80% of the time interacting with main features, 5% of the time saving work, etc.  These workloads should not be assumptions or guesses.  Timers need to be created for all major UI features of the product to generate reliable application workload analysis.
-Text goes here.
+Application workload analysis is important so developers can track how users are interacting with the product. This can showcase potential difficulties in the menu system, allowing the team to modify the user interface to be more straightforward. Additionally, this type of testing will highlight the most used parts of the game (perhaps monitoring the top scores) which would help the team allocate resources to enhance the overall user experience.
+At this time in the development process, the user interface is non-functional and has not yet been implemented in the design. Therefore, we do not have direct historical data to demonstrate accurate workload measurements and percentages. To accomplish this in the future timers will be created on all major UI features, which will allow the team to monitor time spent on each feature. Some of these timers will include but are not limited to: main menu timer, gameplay timer, scoreboard timer, save/load game timer, login timer. In addition to timers, it would be useful to add even trackers to record specific actions, such as the number of times menus are accessed, how often a game is saved/loaded, number of times the game is paused and resumed. In a real world scenario, it would also be useful to deploy surveys and feedback forms during the testing phases, which would provide valuable feedback and insights on UI and workload analysis. A hypothetical workload might look like 10\% of time spent in main menu interactions, 80\% of time playing games, 3\% of time saving and loading the game, 2\% of time logging in, and 5\% of time looking at highscore menus. These hypothetical numbers can serve as a loose goal for the future. 
 
 \subsubsection{Hardware and Software Bottlenecks}
 %250 words minimum
 %Hardware and Software Bottlenecks should be identified and discussed in this section, with test cases to justlify.
-Text goes here.
+Hardware and software bottlenecks are parts of a system where performance capacity is significantly lower than other points, creating a gap in capacity which can affect the overall efficiency of the system. It is essential to identify and address these bottlenecks to prevent system failures, delays, user dissatisfaction, and increased costs. This is a key portion of system optimization and is essential to monitor in order to create and maintain a responsive product.
+
+Major potential hardware bottlenecks include reading data from the disk, shortage of memory, moving data from memory to CPU, and network capacity. In terms of our project this would look like database read and writes for save games, highscores, and logins. Additionally, because the team has opted for a live Django server to host the database, network connectivity could be a major bottleneck as well. 
+
+Possible software bottlenecks include poorly written algorithms that do not scale well with the scope of the program. This is a risk we are currently monitoring via method call timers and code reviews. The performance testing that is being conducted would also highlight potential bottlenecks. Overall, the largest performance bottleneck our project may face is the Unity Engine because Star Wars SMS is a very light 2D platformer that will be very light performance wise. 
+
+So far, the product is well within the defined requirements and there are no glaring bottlenecks or issues that are going to cause performance issues as of yet. This will be an area we will continue to monitor via testing to see if anything arises.
+
 
 \subsubsection{Synthetic Performance Benchmarks}
 %250 words minimum
 %Synthetic Performance Benchmark test cases should be developed and executed on target hardware.  Results should be visualized and discussed in terms of the required target hardware details. (File I/O, CPU, Database).  Sysbench
-Text goes here.
+Synthetic performance benchmark testing is important for developing software for a target system because it allows developers to see how well a system can handle demands that its application might pose. The benchmark tests were performed on a device that is within the target hardware specifications, which was a laptop with AMD Ryzen 7 5825U processor with Radeon Graphics (2.00 GHz), and 16.0 GB RAM.
 
+The CPU performance tests were run using the following line ‘sysbench cpu --threads=X --cpu-max-prime=15000 run’ using thread counts of 1, 2, 4, 8, 16, 32, and 64. Each thread count was run five times on the target machine to demonstrate an average metric which can be used to establish a trend in CPU performance.The execution time increases linearly with the increasing number of threads, this is expected because more time is dedicated by the CPU to manage thread management and switching. The total number of events increases drastically as the number of threads increases from 1 to 16, suggesting the CPU is able to handle much more work as more threads are added up to a certain point. From 16 threads on the average elapsed time increases but the number of events does not, meaning that the overhead cost of managing that number of threads outweighs the added performance (which in this case is not much).
+
+The file input/output tests were run using this line ‘sysbench fileio --file-total-size=X --file-test-mode=rndrw –threads=8 run’. These tests were run using a variety of different file sizes ranging from 512 MB to 32 GB. Each test was run a total of five times to establish a trend in system performance. The execution time of each file size was fairly constant, only increasing significantly for larger file sizes. The throughput of read and writes remains fairly constant across file sizes, except for the 32GB file size, which shows a higher throughput for both read and write.
+
+The results of the synthetic benchmark tests allow the team to see potential bottlenecks in system performance and potential areas of concern. In the case of this software product and the target software, we determine that our hardware performance will not be an issue in the performance of our product. In the future it would be useful to implement testing on the database using sysbench or another similar performance software to establish boundaries in the database performance as well. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{fileioperf.png}
+    \caption{FILE IO Perf}
+    \label{perf}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{cpuperf.png}
+    \caption{CPU Perf}
+    \label{cpuperf}
+\end{figure}
 
 \subsubsection{Performance Tests}
 %250 words minimum and test case description with results
 %Performance Test Cases should be given in this section.  Test Cases should be executed and results should be visualized (Images, Graphs, etc.)
 %examples of performance tests include, but not limited to: Load testing (expected and peak loads, exceeding peak loads), Stress testing, throughput testing, function call timers, compatability testing, fault tolerance testing, etc.
-Text goes here
 
+Performance testing is important in game development to ensure a smooth user experience. Gameplay should be monitored for consistent performance, without lag or crashes, which is essential for user satisfaction. So far, FPS, CPU Time, Memory usage, and method call duration are what have been implemented and monitored. These metrics will allow for monitoring of basic game performance in the scene we have implemented and would allow us to detect any hindrances in performance if there were any. Method call monitoring highlights possible inefficient code and helps give the team possible sections of code that need to be refactored. The method calls that have been implemented so far perform within our expectations and do not slow the game in any capacity. Additional areas of testing include throughput testing, stress testing, and load testing which could be designed and implemented in the future to determine the performance resilience of the game. Game scene transitions as well as database read/write speeds are planned on being monitored once those features are implemented. In previous sections, the methodology for our performance testing was discussed in detail, as well as future plans to implement said tests. So far the performance of the game exceeds our performance requirements and does not showcase any areas for improvements or any bottlenecks. These areas will continue to be monitored to showcase any issues that may arise.
+\subsubsection{Method Time Tests}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{methodtime.png}
+    \caption{Method Time Graph}
+    \label{fig:enter-label}
+\end{figure}
+In order to perform a performance test of the in-game c sharp functions, a script that would allow for the functions start and finish times to be exported to a log file document with the ability to check how many milliseconds has passed since the native Unity console log does not check for milliseconds. We also did this so that we could store the log as unity logs resets every replay and we would like to archive data for a longer time period than that.
+
+We rate a method performance wise as follows: 0s - ~.2s is good, ~.2s - ~.5s is moderate, and ~.5s < is bad performance. For the crouch method a rating of good performance was expected as it only changed the crouch boolean and starts an animation, the shoot method got a moderate rating which is also expected as it is instantiating a projectile prefab and launching it for a duration, the jump method got a good since it is only adding force to the rigidbody and playing an animation, and lastly the most unexpected method for item pick up got a good performance which is surprising as it has to do a collision check then destroy a game object which I thought would take longer. 
+
+Overall, the performance averages out to good which is great for a platformer as our response times are near unnoticeable which helps with  fast paced gameplay and making sure the user has little down time when it comes to waiting for a function or method call to be complete. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{memuse.png}
+    \caption{MEM Use exp v act}
+    \label{memuse}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{cputime.png}
+    \caption{CPU Time exp v act}
+    \label{cputime}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{fps.png}
+    \caption{FPS exp v act}
+    \label{fps}
+\end{figure}
 
 %---------------------------End Product Performance-------------------------------------------------
 
@@ -702,7 +896,7 @@ Text goes here.
 %uncomment the section below when you're ready to insert an image
 %\begin{figure}[h!]
 %    \centering
-%    \includegraphics[width=1\textwidth]{images/flow_graph.png}
+%    \includegraphics[width=0.5\textwidth]{images/flow_graph.png}
 %    \caption{Description of the image here.}
 %    \label{flow_graph}
 %\end{figure}
@@ -791,15 +985,15 @@ Text goes here.
 
 \subsection{Software Product Build Instructions}
 %Include in this section all steps for copying the current state of the product to new computers for continued development.
-Text goes here.
+For continuation of the project, there is a repository made that includes all documentation, assets, and source code. Once the repository has been cloned you can open up the Unity Hub and add a project from disk and go to the github folder and click on the cloned project. Unity Hub should install the correct version of Unity for you and open the project. 
 
 \subsection{Software Product User Guide}
 %Include in this section an overview guide on how to use your software product for a general user and an administrative user.
-Text goes here.
+The user experience has been streamlined as the user will have the build product of the game/software already ready for them. Once they open the build with the correct version of Unity, they will be prompted to create a user account, login, and then be able to enjoy the remake of Star Wars SMS edition. Additionally, the build should work on any platform that can run Unity and no additional settings have to be changed in order to do so.
 
 \subsection{Source Code with Comments}
 %Include in this section all final source code for the product.  Label each file with headings such as, C.1 file1.c, C.2 file2.c, C.3 file1.py, etc.  All source code should be effectively commented.
-Text goes here.
+https://github.com/mattirizarry/CS360-Project/tree/main/StarWars
 
 
 
@@ -825,7 +1019,7 @@ Text goes here.
 %example image:  uncomment to show usage
 %\begin{figure}[h]
 %    \centering
-%    \includegraphics[width=1\textwidth]{images/Add_non-music.png}
+%    \includegraphics[width=0.5\textwidth]{images/Add_non-music.png}
 %    \caption{This is how you add non-music items.}
 %    \label{fig16}
 %\end{figure}
