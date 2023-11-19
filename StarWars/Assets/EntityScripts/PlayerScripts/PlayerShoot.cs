@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using static UnityEngine.UI.Image;
-
+/// <summary>
+/// This script handels shooting controls and makes bullet projectlile
+/// </summary>
 public class PlayerShoot : MonoBehaviour
 {
 
@@ -22,8 +24,11 @@ public class PlayerShoot : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.X) && canShoot) {
+            Debug.Log("Start shoot command");
             ShootBullet();
             StartCoroutine(StartCoolDown());
+        } else if (Input.GetKeyUp(KeyCode.X) && !canShoot) {
+            Debug.Log("Exit shoot command");
         }
     }
 

@@ -78,6 +78,8 @@ GameObject:
   - component: {fileID: 7250857277553701498}
   - component: {fileID: 5527094554448617377}
   - component: {fileID: 7546751354019988651}
+  - component: {fileID: 274921163590877723}
+  - component: {fileID: 7851656777182451515}
   - component: {fileID: 4674913791568882711}
   m_Layer: 0
   m_Name: Luke
@@ -188,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29848b4fba14fc64b85d451bca435cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 800
+  m_JumpForce: 1000
   m_CrouchSpeed: 0
   m_MovementSmoothing: 0.05
   m_AirControl: 1
@@ -308,6 +310,33 @@ MonoBehaviour:
   canShoot: 0
   bulletprefab: {fileID: 786341143510882769, guid: c59cf339206ae4144adc30ff98bf6d27, type: 3}
   gunPosition: {fileID: 440018725711499336}
+--- !u!114 &274921163590877723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6342663228912594927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09fb3742920d9fa4e8b07b6bf5c1daa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7851656777182451515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6342663228912594927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9c790f494249a542afaa5cd1be755c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 4592193674656584926}
+  power: 1000
+  invuln: 0
 --- !u!95 &4674913791568882711
 Animator:
   serializedVersion: 5
