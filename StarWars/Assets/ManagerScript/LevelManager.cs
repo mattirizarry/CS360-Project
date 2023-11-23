@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
@@ -13,7 +14,8 @@ public class LevelManager : MonoBehaviour
     private int totalScore;
     public GameObject scorecardPanel; // Assign this in the Unity Editor
     public GameObject pauseMenuPanel; // Assign in Unity Editor
-    public Text scoreText; // Assign this in the Unity Editor
+    public TextMeshProUGUI scoreText; // Assign this in the Unity Editor
+    public TextMeshProUGUI gameOverText;
     public GameObject playerPrefab; // Assign in Unity Editor
     public GameObject gameOverPanel; // Assign in Unity Editor
     private GameObject currentPlayer;
@@ -26,6 +28,8 @@ public class LevelManager : MonoBehaviour
         CurrentLevel = 1;
         SpawnPlayer();
         pauseMenuPanel.SetActive(false);
+        scorecardPanel.SetActive(false);
+        gameOverPanel.SetActive(false);
         //scorecardPanel.SetActive(false);
         //gameOverPanel.SetActive(false);
         PlayerPosition = new Vector2(0, 0);  //player.getPos() or player.setPos()
@@ -97,12 +101,12 @@ public class LevelManager : MonoBehaviour
         // Example: SceneManager.LoadScene("Level" + level);
     }
 
-    private void EndLevel()
+    public void EndLevel()
     {
         // Logic to end the level
         // Call the scoring method here
         CalculateScore();
-        //AdvanceLevel();
+        AdvanceToNextLevel();
     }
 
     private void CalculateScore()
@@ -112,25 +116,26 @@ public class LevelManager : MonoBehaviour
         // Display the score to the player
         //PlayerHealth = playerPrefab.getHealth();
         int collectableScore = 0;
-        foreach (KeyValuePair<string, int> collectable in CollectablesCollected) {
-            collectableScore += collectable.Value * 10;
-        }
+        //foreach (KeyValuePair<string, int> collectable in CollectablesCollected) {
+        //    collectableScore += collectable.Value * 10;
+        //}
         int enemyScore = 0;
-        foreach (KeyValuePair<string, int> enemy in EnemiesDefeated) {
-            enemyScore += enemy.Value * 50;
-        }
+        //foreach (KeyValuePair<string, int> enemy in EnemiesDefeated) {
+        //    enemyScore += enemy.Value * 50;
+        //}
         int healthScore = PlayerHealth * 10;
         int levelScore = CurrentLevel * 50;
-        int score =  healthScore + collectableScore + enemyScore;
+        int score =  healthScore + collectableScore + enemyScore + levelScore;
         totalScore += score;
 
         //Display the score to the player
-        scoreText.text = "Score: " +
-            "\nPlayer Health: " + PlayerHealth +
-            "\nCollectables Collected: " + collectableScore +
-            "\nEnemies Defeated: " + enemyScore +
-            "\nLevel Score: " + levelScore +
-            "\nTotal Score: " + totalScore;
+        scoreText.text = 
+            "\nPlayer Health: \t\t\t\t" + healthScore +
+            "\nCollectables Found: \t\t\t" + collectableScore +
+            "\nEnemies Defeated: \t\t\t" + enemyScore +
+            "\nLevel Bonus: \t\t\t\t" + levelScore +
+            "\n\nLevel Score: \t\t\t\t" + score +
+            "\n\nTotal Score: \t\t\t\t\t" + totalScore;
         scorecardPanel.SetActive(true);
     }
 
@@ -213,6 +218,7 @@ public class LevelManager : MonoBehaviour
         {
             // Handle game over scenario
             CalculateScore();
+            gameOverText.text = "Final Score" + totalScore;
             gameOverPanel.SetActive(true);
             // Optionally add delay or game over animation
         }
