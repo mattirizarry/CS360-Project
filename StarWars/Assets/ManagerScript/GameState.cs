@@ -45,13 +45,10 @@ public class GameState
     public int PlayerLives { get; set; }
     public Transform PlayerPosition { get; set; }
     private int totalScore = 0;
-    private Dictionary<GameObject, int> EnemiesDefeated;
-    private Dictionary<GameObject, int> CollectablesCollected;
+    private int EnemiesDefeated;
+    private int CollectablesCollected;
 
-    public GameState()
-    {
-        ResetLevel();
-    }
+    
 
     public void CalculateEndScore(TextMeshProUGUI scoreText)
     {
@@ -97,14 +94,7 @@ public class GameState
         return score;
     }
 
-    public void ResetLevel()
-    {
-        CurrentLevel = 1;
-        PlayerHealth = 100;
-        PlayerLives = 3;
-        EnemiesDefeated = new Dictionary<GameObject, int>();
-        CollectablesCollected = new Dictionary<GameObject, int>();
-    }
+ 
 
     public void UpdatePlayerLives(int numLives)
     {
@@ -112,35 +102,21 @@ public class GameState
         //player.setLives(PlayerLives);
     }
 
-    public void EnemyDefeated(GameObject enemy)
+    public void EnemyDefeated()
     {
         //struggling to figure out where this needs to be called from, probably enemy class when it dies
         //not sure how, maybe like below
-        //GameManager.Instance.gameData.EnemyDefeated(this.enemyInfo);
-        if (!EnemiesDefeated.ContainsKey(enemy))
-        {
-            EnemiesDefeated.Add(enemy, 1);
-        }
-        else
-        {
-            EnemiesDefeated[enemy]++;
-        }
+        //GameManager.Instance.gameData.EnemyDefeated();
+        EnemiesDefeated++;
         //enemy.isDefeated = true;
     }
 
-    public void CollectableCollected(GameObject item)
+    public void CollectableCollected()
     {
         //struggling to figure out where this needs to be called from, probably on collision class
         //not sure how, maybe like below
-        //GameManager.Instance.gameData.CollectableCollected(this.gameObject);
-        if (!CollectablesCollected.ContainsKey(item))
-        {
-            CollectablesCollected.Add(item, 1);
-        }
-        else
-        {
-            CollectablesCollected[item]++;
-        }
+        //GameManager.Instance.gameData.CollectableCollected();
+        CollectablesCollected++;
         //item.isCollected = true;
 
     }

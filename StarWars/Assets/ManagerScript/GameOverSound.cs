@@ -1,21 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class BackgroundMusic : MonoBehaviour
+public class GameOverSound : MonoBehaviour
 {
     private AudioSource audioSource;
-
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        audioSource.loop = true;  // Enable looping
-        PlayMusic();
+        // Removed the PlayMusic call from Start and loop setting
     }
 
-    public void PlayMusic()
+    public void PlayGameOverSound()
     {
-        audioSource = GetComponent<AudioSource>();
-        audioSource.loop = true;  // Enable looping
         if (audioSource != null && !audioSource.isPlaying)
         {
             audioSource.Play();
@@ -29,5 +27,4 @@ public class BackgroundMusic : MonoBehaviour
             audioSource.Stop();
         }
     }
-
 }

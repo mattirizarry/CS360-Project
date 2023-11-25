@@ -22,6 +22,10 @@ public class GameManager : MonoBehaviour
     private EnemyFactory enemyFactory;
     public static GameManager Instance { get; private set; }  // Singleton pattern implementation
     public GameState gameData;
+    public LevelEndMusic levelCompleteAudio;
+    LevelData currentLevelData;
+    public GameOverSound gameOverSound;
+    public BackgroundMusic bgMusic;
     void Start() 
    {
         CurrentLevel = 1;
@@ -61,11 +65,11 @@ public class GameManager : MonoBehaviour
 
     void StartLevel()
     {
-        LevelData currentLevelData = FindObjectOfType<LevelData>(); // Find the LevelData for the current level
+        currentLevelData = FindObjectOfType<LevelData>(); // Find the LevelData for the current level
         if (currentLevelData != null)
         {
             SpawnPlayer(currentLevelData.GetSpawnPosition());
-
+            bgMusic.PlayMusic();
             //needs to be replanced by below method
             //SpawnPlayer(currentLevelData.GetPlayerPosition());
             SpawnEnemies(currentLevelData.GetEnemyPositions());
@@ -79,6 +83,7 @@ public class GameManager : MonoBehaviour
         LevelData currentLevelData = FindObjectOfType<LevelData>(); // Find the LevelData for the current level
         if (currentLevelData != null)
         {
+            bgMusic.PlayMusic();
             SpawnPlayer(currentLevelData.GetSpawnPosition());
             //needs to be replanced by below method
             //SpawnPlayer(currentLevelData.GetPlayerPosition());
@@ -142,6 +147,8 @@ public class GameManager : MonoBehaviour
         }
 
         Debug.Log("GameManager: Ending Level...");
+        bgMusic.StopMusic();
+        levelCompleteAudio.Play();
         gameData.CalculateScore(scoreText);
         scorecardPanel.SetActive(true);
         //AdvanceToNextLevel();
@@ -214,9 +221,23 @@ public class GameManager : MonoBehaviour
         else
         {
             // Handle game over scenario
-            gameData.CalculateEndScore(gameOverText);
-            gameOverPanel.SetActive(true);
-            // Optionally add delay or game over animation
+            GameOver();
+            
+        }
+    }
+
+    public void GameOver()
+    {
+        // Optionally add delay or game over animation
+        gameData.CalculateEndScore(gameOverText);
+        gameOverPanel.SetActive(true);
+        if (gameOverSound != null)
+        {
+            gameOverSound.PlayGameOverSound();
+        }
+        else
+        {
+            Debug.LogError("GameOverSound script is not assigned in GameManager.");
         }
     }
 
@@ -244,6 +265,28 @@ public class GameManager : MonoBehaviour
         
         //save player health,lives, pos
         //save collectable list
+        
+
+        //potential logic to save and load enemy and collectables 
+        //could also track enemy health if desired, but probably unnecessary for our scope atm
+        //foreach (EnemyInfo enemy in currentLevelData.enemies)
+        //{
+        //    if (enemy.enemyPrefab.getHealth() <= 0 || enemy.enemyPrefab.isDefeated())
+        //    {
+        //        enemy.isDefeated = true;
+        //    }
+        //}
+
+        //foreach (CollectableInfo item in currentLevelData.items)
+        //{
+        //    if (item.collectablePrefab.isCollected())
+        //    {
+        //        item.isCollected() = true;
+        //    }
+        //}
+
+        //save num items collected and num enemies defeated
+
         //save enemy list
         //save level #
 
@@ -266,11 +309,15 @@ public class GameManager : MonoBehaviour
         //set enemy lsit
         //load level #
 
-        //can't figure out how to prevent enemies and collectables from respawning on save/load game... maybe avoid showcasing that in demos if we can't find work around
+        //load enemy data
 
+        //load item data
 
 
 
     }
+
+
+   
 
 }
