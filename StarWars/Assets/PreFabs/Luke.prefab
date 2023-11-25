@@ -79,7 +79,10 @@ GameObject:
   - component: {fileID: 5527094554448617377}
   - component: {fileID: 7546751354019988651}
   - component: {fileID: 274921163590877723}
+  - component: {fileID: 290695557674133833}
   - component: {fileID: 7851656777182451515}
+  - component: {fileID: 1090540657631002049}
+  - component: {fileID: 9037924540956786617}
   - component: {fileID: 4674913791568882711}
   m_Layer: 0
   m_Name: Luke
@@ -223,6 +226,7 @@ MonoBehaviour:
   horizontal: 0
   jump: 0
   crouch: 0
+  rigidbody: {fileID: 4592193674656584926}
 --- !u!114 &7250857277553701498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,6 +326,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09fb3742920d9fa4e8b07b6bf5c1daa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &290695557674133833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6342663228912594927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1f29f2b6deab4a46b6071d7b6b5c50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 100
 --- !u!114 &7851656777182451515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,6 +354,37 @@ MonoBehaviour:
   rb: {fileID: 4592193674656584926}
   power: 1000
   invuln: 0
+  healthHandler: {fileID: 290695557674133833}
+--- !u!114 &1090540657631002049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6342663228912594927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e96455e7b1fe3d4d99904e6f054a623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthhandler: {fileID: 290695557674133833}
+  healthslider: {fileID: 0}
+--- !u!114 &9037924540956786617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6342663228912594927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac9ebb841cd39ec459ac64c0b5e42a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthHandler: {fileID: 290695557674133833}
+  spriterender: {fileID: 5527094554448617377}
+  rigidbody: {fileID: 4592193674656584926}
+  isDead: 0
 --- !u!95 &4674913791568882711
 Animator:
   serializedVersion: 5

@@ -10,12 +10,16 @@ public class PlayerCollision : MonoBehaviour
 
     public bool invuln;
 
-    
+    public PlayerShoot shoothandler; 
+
     public EntityHealthHandler healthHandler;
+
+    public PlayerDeathHandler deathhandler;
+
     // Start is called before the first frame update
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "EnemyDamage") {
+        if (collision.gameObject.tag == "EnemyDamage" || collision.gameObject.tag == "Trap") {
             var dmgInst = collision.gameObject.GetComponent<EntityDamage>();
             
                 OnHit(dmgInst.GetEntityDamage());
@@ -30,8 +34,33 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.gameObject.tag == "PickUp")
         {
-           
+            if (collision.gameObject.GetComponent<HealthCollectable>()) {
+                var healInst = collision.gameObject.GetComponent<HealthCollectable>();
+                healthHandler.SetHealth(healthHandler.GetHealth() + healInst.GetHealAmount());
+            }
+
+            if (collision.gameObject.GetComponent<ExtraLifeCollectable>())
+            {
+                var lifeInst = collision.gameObject.GetComponent<ExtraLifeCollectable>();
+                deathhandler.SetLife(deathhandler.GetLife() + lifeInst.GetLifeAmount());
+            }
+
+            if (collision.gameObject.GetComponent<BlasterUpgradeCollectable>())
+            {
+                var ratelifeInst = collision.gameObject.GetComponent<BlasterUpgradeCollectable>();
+                shoothandler.SetRate(shoothandler.GetRate() - ratelifeInst.GetFireRate());
+            }
+
             Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.tag == "EnemyDamage")
+        {
+            var dmgInst = collision.gameObject.GetComponent<EntityDamage>();
+
+            OnHit(dmgInst.GetEntityDamage());
+
+
         }
     }
 

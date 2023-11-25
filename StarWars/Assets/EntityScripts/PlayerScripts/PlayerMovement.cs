@@ -15,13 +15,20 @@ public class PlayerMovement : MonoBehaviour
     public bool jump;
 
     public bool crouch;
-    
+
+    public Rigidbody2D rigidbody;
+
+    private void Start()
+    {
+        
+    }
+
     void Update()
     {
 
+        rigidbody.freezeRotation = true;
 
 
-        
         horizontal = Input.GetAxisRaw("Horizontal") * speed;
         
         
@@ -48,4 +55,9 @@ public class PlayerMovement : MonoBehaviour
         contoller.Move(horizontal * Time.fixedDeltaTime,crouch, jump);
         jump = false;
     }
+
+    public void setSpeed(int val) {
+        speed = val;
+    }
+    
 }

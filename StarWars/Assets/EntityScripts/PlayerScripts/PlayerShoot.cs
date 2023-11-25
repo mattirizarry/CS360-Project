@@ -50,4 +50,13 @@ public class PlayerShoot : MonoBehaviour
         yield return new WaitForSeconds(cooldown);
         canShoot = true;
     }
+
+    public float GetRate() {
+        return cooldown;
+    }
+
+    public void SetRate(float val)
+    {
+         cooldown = val;
+    }
 }

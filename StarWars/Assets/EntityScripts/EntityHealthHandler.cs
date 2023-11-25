@@ -15,7 +15,13 @@ public class EntityHealthHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        healthcap();
+    }
+
+    public void healthcap() {
+        if (_health > 100) {
+            _health = 100;
+        }
     }
 
     public int GetHealth() { 
