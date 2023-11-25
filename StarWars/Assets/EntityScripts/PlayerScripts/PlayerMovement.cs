@@ -24,11 +24,12 @@ public class PlayerMovement : MonoBehaviour
         
         
 
-        if (Input.GetKeyDown(KeyCode.Z)) {
+        if (Input.GetKeyDown(KeyCode.Z) && !crouch) {
+            Debug.Log("Jump control");
             jump = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) && !jump)
         {
             crouch = true;
         }
