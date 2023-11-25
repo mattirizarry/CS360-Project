@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
+    public SpriteRenderer spriterender;
+
     public Rigidbody2D rb;
 
     public float power = 1000f;
@@ -64,13 +66,43 @@ public class PlayerCollision : MonoBehaviour
         }
     }
 
-    void OnHit(int dmg) {
-        healthHandler.SetHealth(healthHandler.GetHealth() - dmg);
-        rb.AddForce(Vector2.left * power * 4f);
-        rb.AddForce(Vector2.up * power * 1.25f);
+    void OnTriggerStay2D(Collider2D collision) {
+        if (collision.gameObject.tag == "Trap")
+        {
+            var dmgInst = collision.gameObject.GetComponent<EntityDamage>();
+
+            OnHit(dmgInst.GetEntityDamage());
+
+
+        }
     }
 
-    //IEnumerator FLicker() { 
-    //
-    //}
+    void OnHit(int dmg) {
+        if (!invuln) {
+            healthHandler.SetHealth(healthHandler.GetHealth() - dmg);
+            rb.AddForce(Vector2.left * power * 2f);
+            rb.AddForce(Vector2.up * power * .25f);
+            StartCoroutine(Flicker());
+        }
+    }
+
+    IEnumerator Flicker() {
+        if ( healthHandler.GetHealth() > 0) {
+            spriterender.enabled = true;
+            invuln = true;
+            yield return new WaitForSeconds(.15f);
+            spriterender.enabled = false;
+            yield return new WaitForSeconds(.15f);
+            spriterender.enabled = true;
+            yield return new WaitForSeconds(.15f);
+            spriterender.enabled = false;
+            yield return new WaitForSeconds(.15f);
+            spriterender.enabled = true;
+            yield return new WaitForSeconds(.15f);
+            spriterender.enabled = false;
+            yield return new WaitForSeconds(.15f);
+            spriterender.enabled = true;
+            invuln = false;
+        }
+    }
 }
