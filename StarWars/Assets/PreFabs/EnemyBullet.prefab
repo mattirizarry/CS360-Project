@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4298107179300858572}
   - component: {fileID: 7661481504912138306}
   m_Layer: 0
-  m_Name: Bullet
-  m_TagString: PlayerDamage
+  m_Name: EnemyBullet
+  m_TagString: EnemyDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 786341143510882769}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.38, y: 1.97, z: 0.012901574}
-  m_LocalScale: {x: 8.128947, y: 8.128947, z: 8.128947}
+  m_LocalPosition: {x: -7.38, y: 1.97, z: 0.012902}
+  m_LocalScale: {x: 5.2549577, y: 5.2549577, z: 5.2549577}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 0.5
-  speed: 50
+  speed: 25
   isRight: 0
 --- !u!61 &7661481504912138306
 BoxCollider2D:

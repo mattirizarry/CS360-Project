@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour
 {
+
     public float speed;
 
     public float movementTime;
@@ -21,6 +22,10 @@ public class EnemyBehavior : MonoBehaviour
     public AnimationClip walkingAni;
 
     public Animator anim;
+
+    public GameObject bulletprefab;
+
+    public GameObject gunPosition;
 
     // Update is called once per frame
     void Update()
@@ -46,14 +51,16 @@ public class EnemyBehavior : MonoBehaviour
         // Will change the direction of where the enemy will move
         if(movementTime >= maxTime){
 
-
-            if(goingRight == true)
+            if(shooting == false)
             {
-                StartCoroutine(shoot(false));
-            }
-            else
-            {
-                StartCoroutine(shoot(true));
+                 if(goingRight == true)
+                {
+                    StartCoroutine(shootAnim(false));
+                }
+                else
+                {
+                    StartCoroutine(shootAnim(true));
+                }
             }
         }
 
@@ -68,7 +75,7 @@ public class EnemyBehavior : MonoBehaviour
         transform.localScale = theScale;
     }
 
-    private IEnumerator shoot(bool status)
+    private IEnumerator shootAnim(bool status)
     {
         anim.Play(shootingAni.name);
         shooting = true;
@@ -81,6 +88,23 @@ public class EnemyBehavior : MonoBehaviour
         goingRight = status;
         movementTime = 0;
         Flip();
+    }
+
+    //method called in animation events and spawns bullet
+    public void shoot()
+    {
+
+        if (transform.localScale.x < 0) {
+            var clone = Instantiate(bulletprefab, gunPosition.transform.position, transform.rotation);
+            clone.GetComponent<BulletScript>().isRight = false;
+        }
+
+        if (transform.localScale.x > 0)
+        {
+            var clone = Instantiate(bulletprefab, gunPosition.transform.position, transform.rotation);
+            clone.GetComponent<BulletScript>().isRight = true;
+        }
+
     }
 
 }
