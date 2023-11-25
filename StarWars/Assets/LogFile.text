@@ -5617,3 +5617,7 @@ You probably need to assign the rigidbody variable of the PlayerDeathHandler scr
 [07.08.03.510958]Detected Player Damage
 [07.08.03.607205]Exit shoot command
 [07.08.05.569645]Start shoot command
+[07.10.48.176254]GUID [a9c790f494249a542afaa5cd1be755c8] for asset 'Assets/EntityScripts/PlayerScripts/PlayerDamage.cs' conflicts with:
+  'Assets/EntityScripts/PlayerScripts/PlayerCollision.cs' (current owner)
+Assigning a new guid.
+
