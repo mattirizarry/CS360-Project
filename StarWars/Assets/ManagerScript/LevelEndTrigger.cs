@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class LevelEndTrigger : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject.tag == "Player")
         {
-            LevelManager.Instance.EndLevel(); // Call the EndLevel method in Level Manager
+            if (GameManager.Instance == null)
+            {
+                Debug.LogError("LevelEndTrigger: GameManager instance is null.");
+                return;
+            }
+
+            Debug.Log("LevelEndTrigger: Player has triggered the end level.");
+            GameManager.Instance.EndLevel();
         }
     }
+
 }
 
