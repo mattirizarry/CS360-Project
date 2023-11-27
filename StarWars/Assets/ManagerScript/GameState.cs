@@ -52,7 +52,10 @@ public class Scores {
     }
 
     public override string ToString() {
-        return "Health Score: " + healthScore + "\nCollectable Score: " + collectableScore + "\nEnemy Score: " + enemyScore + "\nTotal Score: " + totalScore;
+        return "\nPlayer Health: \t\t\t\t" + healthScore +
+                "\nCollectables Found: \t\t\t" + collectableScore +
+                "\nEnemies Defeated: \t\t\t" + enemyScore +
+                "\n\nLevel Score: \t\t\t\t" + score;
     }
 }
 
