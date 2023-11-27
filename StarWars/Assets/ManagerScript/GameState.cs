@@ -55,7 +55,7 @@ public class Scores {
         return "\nPlayer Health: \t\t\t\t" + healthScore +
                 "\nCollectables Found: \t\t\t" + collectableScore +
                 "\nEnemies Defeated: \t\t\t" + enemyScore +
-                "\n\nLevel Score: \t\t\t\t" + score;
+                "\n\nLevel Score: \t\t\t\t" + totalScore;
     }
 }
 
