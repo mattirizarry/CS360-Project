@@ -6,7 +6,7 @@ public class BlasterUpgradeCollectable : MonoBehaviour
 {
     public int fireRate = 10;
     public bool isCollected = false;
-    public void Collect(Entity player)
+    public override void Collect(Entity player)
     {
         isCollected = true;
         GameManager.Instance.gameData.CollectableCollected();
