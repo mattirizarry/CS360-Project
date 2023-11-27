@@ -18,7 +18,7 @@ public class PlayerDeathHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerLives = 3;
+        playerLives = 0;
         isDead = false;
         playerSpawner = GameObject.FindGameObjectWithTag("PlayerSpawn");
     }
@@ -32,6 +32,11 @@ public class PlayerDeathHandler : MonoBehaviour
     IEnumerator ExecuteDeath() {
         if (healthHandler.GetHealth() < -1 && !isDead)
         {
+
+            if (playerLives - 1 < 0) {
+                GameManager.Instance.GameOver();
+            }
+
             playerLives = playerLives - 1;
             rigidbody.constraints = RigidbodyConstraints2D.FreezePosition;
             spriterender.enabled = false;
@@ -39,13 +44,12 @@ public class PlayerDeathHandler : MonoBehaviour
             yield return new WaitForSeconds(1f);
             transform.position = playerSpawner.transform.position;
             yield return new WaitForSeconds(1f);
-            if (playerLives > -1) {
+            if (playerLives >= 0) {
                 rigidbody.constraints = RigidbodyConstraints2D.None;
                 spriterender.enabled = true;
                 healthHandler.SetHealth(100);
                 isDead = false;
             }
-            
         }
     }
 

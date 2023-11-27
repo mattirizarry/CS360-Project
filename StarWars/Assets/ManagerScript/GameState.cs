@@ -37,6 +37,25 @@ public class EnemyInfo
 
 }
 
+public class Scores {
+    public int healthScore;
+    public int collectableScore;
+    public int enemyScore;
+    public int levelScore;
+    public int totalScore;
+
+    public Scores(int health, int collectable, int enemy, int total) {
+        healthScore = health;
+        collectableScore = collectable;
+        enemyScore = enemy;
+        totalScore = total;
+    }
+
+    public override string ToString() {
+        return "Health Score: " + healthScore + "\nCollectable Score: " + collectableScore + "\nEnemy Score: " + enemyScore + "\nTotal Score: " + totalScore;
+    }
+}
+
 
 public class GameState
 {
@@ -44,54 +63,28 @@ public class GameState
     public int PlayerHealth { get; set; }
     public int PlayerLives { get; set; }
     public Transform PlayerPosition { get; set; }
-    private int totalScore = 0;
     private int EnemiesDefeated;
     private int CollectablesCollected;
 
-    
-
-    public void CalculateEndScore(TextMeshProUGUI scoreText)
+    public Scores CalculateScores()
     {
-        // Implement scoring logic here
-        totalScore += CalculateLevelScore(scoreText);
-        scoreText.text = "\n\nTotal Score: \t\t\t\t\t" + totalScore;
-    }
+        PlayerHealth = GameManager.Instance.playerPrefab.GetComponent<EntityHealthHandler>().GetHealth();
 
+        Debug.Log("Player Health: " + PlayerHealth);
 
-    public void CalculateScore(TextMeshProUGUI scoreText)
-    {
-        // Implement scoring logic here
-        totalScore += CalculateLevelScore(scoreText);
-        scoreText.text += "\n\nTotal Score: \t\t\t\t\t" + totalScore;
-    }
+        int collectableScore = 10 * CollectablesCollected;
+        int enemyScore = 50 * EnemiesDefeated;
+        int healthScore;
 
-    private int CalculateLevelScore(TextMeshProUGUI scoreText)
-    {
-        // Calculate the score for the current level
-        // Implement scoring logic here
-        // Display the score to the player
-        //PlayerHealth = playerPrefab.getHealth();
-        int collectableScore = 0;
-        //foreach (KeyValuePair<string, int> collectable in CollectablesCollected) {
-        //    collectableScore += collectable.Value * 10;
-        //}
-        int enemyScore = 0;
-        //foreach (KeyValuePair<string, int> enemy in EnemiesDefeated) {
-        //    enemyScore += enemy.Value * 50;
-        //}
-        int healthScore = PlayerHealth * 10;
-        int levelScore = CurrentLevel * 50;
-        int score = healthScore + collectableScore + enemyScore + levelScore;
+        if (PlayerHealth < 0) {
+            healthScore = 0;
+        } else {
+            healthScore = PlayerHealth * 10;
+        }
 
-        //Display the score to the player
-        scoreText.text =
-            "\nPlayer Health: \t\t\t\t" + healthScore +
-            "\nCollectables Found: \t\t\t" + collectableScore +
-            "\nEnemies Defeated: \t\t\t" + enemyScore +
-            "\nLevel Bonus: \t\t\t\t" + levelScore +
-            "\n\nLevel Score: \t\t\t\t" + score;
+        int score = healthScore + collectableScore + enemyScore;
 
-        return score;
+        return new Scores(healthScore, collectableScore, enemyScore, score);
     }
 
  
@@ -99,7 +92,6 @@ public class GameState
     public void UpdatePlayerLives(int numLives)
     {
         PlayerLives += numLives;
-        //player.setLives(PlayerLives);
     }
 
     public void EnemyDefeated()
@@ -120,8 +112,4 @@ public class GameState
         //item.isCollected = true;
 
     }
-
-
- 
-
 }

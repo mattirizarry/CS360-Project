@@ -10,6 +10,11 @@ public class EnemyDeathHandler : MonoBehaviour
     {
         if (healthHandler.GetHealth() <= 0) {
             Destroy(this.gameObject);
+            
+            // increment the enemy score in gamestate.cs
+
+            GameManager.Instance.gameData.EnemyDefeated();
+
         }
     }
 }

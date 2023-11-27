@@ -39,18 +39,28 @@ public class PlayerCollision : MonoBehaviour
             if (collision.gameObject.GetComponent<HealthCollectable>()) {
                 var healInst = collision.gameObject.GetComponent<HealthCollectable>();
                 healthHandler.SetHealth(healthHandler.GetHealth() + healInst.GetHealAmount());
+
+                // if this is a health collectible, we need to increment the GameState score by some amount
+
+                // we can do this by calling the GameManager's IncrementScore method
+
+                GameManager.Instance.gameData.CollectableCollected();
             }
 
             if (collision.gameObject.GetComponent<ExtraLifeCollectable>())
             {
                 var lifeInst = collision.gameObject.GetComponent<ExtraLifeCollectable>();
                 deathhandler.SetLife(deathhandler.GetLife() + lifeInst.GetLifeAmount());
+
+                GameManager.Instance.gameData.CollectableCollected();
             }
 
             if (collision.gameObject.GetComponent<BlasterUpgradeCollectable>())
             {
                 var ratelifeInst = collision.gameObject.GetComponent<BlasterUpgradeCollectable>();
                 shoothandler.SetRate(shoothandler.GetRate() - ratelifeInst.GetFireRate());
+
+                GameManager.Instance.gameData.CollectableCollected();
             }
 
             Destroy(collision.gameObject);
@@ -61,8 +71,6 @@ public class PlayerCollision : MonoBehaviour
             var dmgInst = collision.gameObject.GetComponent<EntityDamage>();
 
             OnHit(dmgInst.GetEntityDamage());
-
-
         }
     }
 

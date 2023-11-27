@@ -21,8 +21,4 @@ public class PlayerDamage : MonoBehaviour
         rb.AddForce(Vector2.left * power * 4f);
         rb.AddForce(Vector2.up * power * 1.25f);
     }
-
-    //IEnumerator FLicker() { 
-    //
-    //}
 }

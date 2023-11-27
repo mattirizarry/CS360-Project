@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     public int PlayerLives { get; private set; }
     private Dictionary <string, int> EnemiesDefeated;
     private Dictionary <string, int> CollectablesCollected;
-    private int totalScore;
     public GameObject scorecardPanel; // Assign this in the Unity Editor
     public GameObject pauseMenuPanel; // Assign in Unity Editor
     public TextMeshProUGUI scoreText; // Assign this in the Unity Editor
@@ -34,7 +33,7 @@ public class GameManager : MonoBehaviour
         scorecardPanel.SetActive(false);
         gameOverPanel.SetActive(false);
         PlayerHealth = 100;  //player.getHealth() or player.setHealth()
-        PlayerLives = 3;     //player.getLives() or player.setLives()
+        PlayerLives = 1;     //player.getLives() or player.setLives()
         EnemiesDefeated = new Dictionary<string, int>();
         enemyFactory = FindObjectOfType<EnemyFactory>();
         
@@ -149,7 +148,10 @@ public class GameManager : MonoBehaviour
         Debug.Log("GameManager: Ending Level...");
         bgMusic.StopMusic();
         levelCompleteAudio.Play();
-        gameData.CalculateScore(scoreText);
+
+        // Update the score text
+        scoreText.text = gameData.CalculateScores().ToString();
+
         scorecardPanel.SetActive(true);
         //AdvanceToNextLevel();
     }
@@ -216,11 +218,13 @@ public class GameManager : MonoBehaviour
             // Optionally add delay or respawn animation
             currentPlayer.transform.position = spawnPos;
             gameData.UpdatePlayerLives(-1);
+            Debug.Log("Player Respawned");
             // Reset player state as needed
         }
         else
         {
             // Handle game over scenario
+            Debug.Log("Game Over");
             GameOver();
             
         }
@@ -229,8 +233,9 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         // Optionally add delay or game over animation
-        gameData.CalculateEndScore(gameOverText);
+        gameOverText.text = gameData.CalculateScores().ToString();
         gameOverPanel.SetActive(true);
+        
         if (gameOverSound != null)
         {
             gameOverSound.PlayGameOverSound();

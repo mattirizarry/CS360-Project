@@ -25,12 +25,12 @@ public class PlayerShoot : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X) && canShoot) {
+        if (Input.GetKeyDown(KeyCode.Mouse0) && canShoot) {
             Debug.Log("Start shoot command");
             ShootBullet();
             blastersound.Play();
             StartCoroutine(StartCoolDown());
-        } else if (Input.GetKeyUp(KeyCode.X) && !canShoot) {
+        } else if (Input.GetKeyUp(KeyCode.Mouse0) && !canShoot) {
             Debug.Log("Exit shoot command");
         }
     }

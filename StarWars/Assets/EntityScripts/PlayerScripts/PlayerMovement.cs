@@ -33,17 +33,17 @@ public class PlayerMovement : MonoBehaviour
         
         
 
-        if (Input.GetKeyDown(KeyCode.Z) && !crouch) {
+        if (Input.GetKeyDown(KeyCode.Space) && !crouch) {
             
             jump = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow) && !jump)
+        if (Input.GetKeyDown(KeyCode.LeftControl) && !crouch)
         {
             Debug.Log("crouch");
             crouch = true;
         }
-        else if(Input.GetKeyUp(KeyCode.DownArrow))
+        else if(Input.GetKeyUp(KeyCode.LeftControl))
         {
             Debug.Log("Exit crouch");
             crouch = false;
