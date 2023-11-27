@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthCollectable : CollectableDecorator
+public class HealthCollectable : MonoBehaviour
 {
     public int healthAmount = 30;
 
-    public override void Collect(Entity player)
-    {
-        //player.IncreaseHealth(healthAmount);
+
+    public int GetHealAmount() {
+        return healthAmount;
     }
 }
-
 
 
