@@ -27,6 +27,7 @@ public class EnemyBehavior : MonoBehaviour
 
     public GameObject gunPosition;
 
+    public AudioSource blastersound;
     // Update is called once per frame
     void Update()
     {
@@ -93,7 +94,7 @@ public class EnemyBehavior : MonoBehaviour
     //method called in animation events and spawns bullet
     public void shoot()
     {
-
+        blastersound.Play();
         if (transform.localScale.x < 0) {
             var clone = Instantiate(bulletprefab, gunPosition.transform.position, transform.rotation);
             clone.GetComponent<BulletScript>().isRight = false;

@@ -6,12 +6,7 @@ public class BlasterUpgradeCollectable : MonoBehaviour
 {
     public int fireRate = 10;
     public bool isCollected = false;
-    public override void Collect(Entity player)
-    {
-        isCollected = true;
-        GameManager.Instance.gameData.CollectableCollected();
-        //player.IncreaseFireRate(fireRate);
-    }
+    
     public float GetFireRate() {
         return fireRate;
     }

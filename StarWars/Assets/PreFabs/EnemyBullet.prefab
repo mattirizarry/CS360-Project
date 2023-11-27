@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7842743987300202816}
   - component: {fileID: 4298107179300858572}
   - component: {fileID: 7661481504912138306}
-  - component: {fileID: 6946957239454150029}
+  - component: {fileID: 6956903297949871288}
   m_Layer: 0
   m_Name: EnemyBullet
   m_TagString: EnemyDamage
@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 786341143510882769}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.38, y: 1.97, z: 0.012902}
-  m_LocalScale: {x: 5.2549577, y: 5.2549577, z: 5.2549577}
+  m_LocalPosition: {x: -7.38, y: 1.97, z: 0.012901574}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 0.5
-  speed: 25
+  speed: 50
   isRight: 0
 --- !u!61 &7661481504912138306
 BoxCollider2D:
@@ -147,8 +147,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.08, y: 0.03}
   m_EdgeRadius: 0
-<<<<<<< HEAD
---- !u!114 &6946957239454150029
+--- !u!114 &6956903297949871288
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,5 +160,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 30
-=======
->>>>>>> main
