@@ -115456,7 +115456,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 546101801}
     - target: {fileID: 1090540657631002049, guid: 926e01452f061a448adc94ca1f2a01db, type: 3}
-<<<<<<< HEAD
       propertyPath: deathhandler
       value: 
       objectReference: {fileID: 1803760576}
@@ -115464,7 +115463,6 @@ PrefabInstance:
       propertyPath: healthslider
       value: 
       objectReference: {fileID: 1717394683}
-=======
       propertyPath: healthslider
       value: 
       objectReference: {fileID: 1717394683}
@@ -115472,12 +115470,10 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.644
       objectReference: {fileID: 0}
->>>>>>> main
     - target: {fileID: 6342663228912594927, guid: 926e01452f061a448adc94ca1f2a01db, type: 3}
       propertyPath: m_Name
       value: Luke
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 7851656777182451515, guid: 926e01452f061a448adc94ca1f2a01db, type: 3}
       propertyPath: deathhandler
       value: 
@@ -115490,8 +115486,6 @@ PrefabInstance:
       propertyPath: spriterender
       value: 
       objectReference: {fileID: 1803760598}
-=======
->>>>>>> main
     - target: {fileID: 8440579815657872738, guid: 926e01452f061a448adc94ca1f2a01db, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.4
@@ -115537,7 +115531,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 926e01452f061a448adc94ca1f2a01db, type: 3}
-<<<<<<< HEAD
 --- !u!114 &1803760576 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9037924540956786617, guid: 926e01452f061a448adc94ca1f2a01db, type: 3}
@@ -115549,14 +115542,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac9ebb841cd39ec459ac64c0b5e42a7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-=======
->>>>>>> main
 --- !u!4 &1803760586 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8440579815657872738, guid: 926e01452f061a448adc94ca1f2a01db, type: 3}
   m_PrefabInstance: {fileID: 1803760575}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
 --- !u!114 &1803760592 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7546751354019988651, guid: 926e01452f061a448adc94ca1f2a01db, type: 3}
@@ -115573,8 +115563,6 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 5527094554448617377, guid: 926e01452f061a448adc94ca1f2a01db, type: 3}
   m_PrefabInstance: {fileID: 1803760575}
   m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> main
 --- !u!1 &1916276362
 GameObject:
   m_ObjectHideFlags: 0
