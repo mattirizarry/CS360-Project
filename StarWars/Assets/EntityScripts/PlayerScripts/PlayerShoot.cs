@@ -15,6 +15,8 @@ public class PlayerShoot : MonoBehaviour
 
     public GameObject bulletprefab;
 
+    public AudioSource blastersound;
+
     public GameObject gunPosition;
     // Update is called once per frame
     private void Start()
@@ -26,6 +28,7 @@ public class PlayerShoot : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X) && canShoot) {
             Debug.Log("Start shoot command");
             ShootBullet();
+            blastersound.Play();
             StartCoroutine(StartCoolDown());
         } else if (Input.GetKeyUp(KeyCode.X) && !canShoot) {
             Debug.Log("Exit shoot command");

@@ -5896,3 +5896,288 @@ You probably need to assign the spriterender variable of the PlayerCollision scr
 [12.56.38.337836]Exit shoot command
 [12.56.38.610499]Start shoot command
 [12.56.38.734799]Exit shoot command
+[12.39.38.583188]MissingReferenceException: The variable bulletprefab of EnemyBehavior doesn't exist anymore.
+You probably need to reassign the bulletprefab variable of the 'EnemyBehavior' script in the inspector.
+[12.39.38.593168]MissingReferenceException: The variable bulletprefab of EnemyBehavior doesn't exist anymore.
+You probably need to reassign the bulletprefab variable of the 'EnemyBehavior' script in the inspector.
+[12.39.40.594391]Start shoot command
+[12.39.40.670340]Exit shoot command
+[12.39.40.887466]Exit shoot command
+[12.39.40.931440]MissingReferenceException: The variable bulletprefab of EnemyBehavior doesn't exist anymore.
+You probably need to reassign the bulletprefab variable of the 'EnemyBehavior' script in the inspector.
+[12.39.40.932439]MissingReferenceException: The variable bulletprefab of EnemyBehavior doesn't exist anymore.
+You probably need to reassign the bulletprefab variable of the 'EnemyBehavior' script in the inspector.
+[12.39.41.031383]Detected Player Damage
+[12.39.41.151314]Start shoot command
+[12.39.41.290230]Exit shoot command
+[12.39.41.490110]Detected Player Damage
+[12.39.43.282213]MissingReferenceException: The variable bulletprefab of EnemyBehavior doesn't exist anymore.
+You probably need to reassign the bulletprefab variable of the 'EnemyBehavior' script in the inspector.
+[12.42.58.468464]Start shoot command
+[12.42.58.618431]Exit shoot command
+[12.42.59.195566]Start shoot command
+[12.42.59.331488]Exit shoot command
+[12.43.07.630826]Start shoot command
+[12.43.07.707793]Detected Player Damage
+[12.43.07.778741]Exit shoot command
+[12.43.08.512333]Start shoot command
+[12.43.08.649113]Detected Player Damage
+[12.43.08.680614]Exit shoot command
+[12.43.12.735581]Start shoot command
+[12.43.12.862676]Exit shoot command
+[12.43.12.947314]Detected Player Damage
+[12.43.14.017529]Start shoot command
+[12.43.14.130415]Detected Player Damage
+[12.43.14.183653]Exit shoot command
+[12.43.14.383539]crouch
+[12.43.14.791879]Exit crouch
+[12.43.25.023569]Start shoot command
+[12.43.25.127658]Exit shoot command
+[12.43.25.334541]Exit shoot command
+[12.43.25.647641]Start shoot command
+[12.43.25.767325]Exit shoot command
+[12.43.26.311896]Start shoot command
+[12.43.26.511210]Start shoot command
+[12.43.26.711559]Start shoot command
+[12.43.26.911197]Start shoot command
+[12.43.27.119333]Start shoot command
+[12.43.27.310459]Start shoot command
+[12.43.27.520356]Start shoot command
+[12.43.27.751492]Start shoot command
+[12.43.27.975111]Start shoot command
+[12.44.10.409062]Start shoot command
+[12.44.10.529000]Exit shoot command
+[12.44.10.572975]Detected Player Damage
+[12.44.10.752716]crouch
+[12.44.10.942575]Start shoot command
+[12.44.11.051513]Detected Player Damage
+[12.44.11.072510]Exit shoot command
+[12.44.11.328437]Exit crouch
+[12.44.15.047534]Start shoot command
+[12.44.15.167085]Exit shoot command
+[12.44.15.293012]Detected Player Damage
+[12.44.15.568854]Start shoot command
+[12.44.15.690784]Exit shoot command
+[12.44.15.732760]Detected Player Damage
+[12.44.15.814716]crouch
+[12.44.16.063571]Exit crouch
+[01.01.09.101890]Start shoot command
+[01.01.09.123104]ArgumentNullException: Value cannot be null.
+Parameter name: source
+[01.01.10.315024]Start shoot command
+[01.01.10.316023]ArgumentNullException: Value cannot be null.
+Parameter name: source
+[01.01.10.527902]Start shoot command
+[01.01.10.528902]ArgumentNullException: Value cannot be null.
+Parameter name: source
+[01.01.10.745778]Start shoot command
+[01.01.10.746778]ArgumentNullException: Value cannot be null.
+Parameter name: source
+[01.01.10.951660]Start shoot command
+[01.01.10.952659]ArgumentNullException: Value cannot be null.
+Parameter name: source
+[01.01.11.497491]Start shoot command
+[01.01.11.498489]ArgumentNullException: Value cannot be null.
+Parameter name: source
+[01.01.12.081069]Start shoot command
+[01.01.12.082068]ArgumentNullException: Value cannot be null.
+Parameter name: source
+[01.01.12.344772]Start shoot command
+[01.01.12.345781]ArgumentNullException: Value cannot be null.
+Parameter name: source
+[01.01.13.689019]Start shoot command
+[01.01.13.690019]ArgumentNullException: Value cannot be null.
+Parameter name: source
+[01.01.13.936866]Start shoot command
+[01.01.13.937865]ArgumentNullException: Value cannot be null.
+Parameter name: source
+[01.01.14.176676]Start shoot command
+[01.01.14.176676]ArgumentNullException: Value cannot be null.
+Parameter name: source
+[01.01.48.671675]Start shoot command
+[01.01.48.688666]ArgumentNullException: Value cannot be null.
+Parameter name: source
+[01.01.49.899512]Start shoot command
+[01.01.49.900511]ArgumentNullException: Value cannot be null.
+Parameter name: source
+[01.01.50.545142]Start shoot command
+[01.01.50.546140]ArgumentNullException: Value cannot be null.
+Parameter name: source
+[01.02.25.988750]Start shoot command
+[01.02.26.128780]Exit shoot command
+[01.02.26.930643]Start shoot command
+[01.02.27.049069]Exit shoot command
+[01.02.28.622719]Start shoot command
+[01.02.28.759912]Exit shoot command
+[01.02.30.545196]Start shoot command
+[01.02.30.692241]Exit shoot command
+[01.02.31.429125]Start shoot command
+[01.02.31.552301]Exit shoot command
+[01.02.31.755248]Exit shoot command
+[01.07.22.621112]Start shoot command
+[01.07.22.711566]Detected Player Damage
+[01.07.22.729556]Exit shoot command
+[01.07.24.193068]crouch
+[01.07.24.254539]Exit crouch
+[01.07.24.369497]crouch
+[01.07.24.417470]Exit crouch
+[01.07.25.961484]Start shoot command
+[01.07.26.075533]Exit shoot command
+[01.07.26.292317]Detected Player Damage
+[01.07.31.242233]Start shoot command
+[01.07.31.305928]Exit shoot command
+[01.07.31.500887]Exit shoot command
+[01.07.31.672962]Exit shoot command
+[01.07.31.768910]Start shoot command
+[01.07.31.883207]Exit shoot command
+[01.07.32.098966]Exit shoot command
+[01.07.32.500268]Start shoot command
+[01.07.32.565288]Exit shoot command
+[01.07.32.586970]crouch
+[01.07.32.827532]Exit shoot command
+[01.07.33.138035]Start shoot command
+[01.07.33.252587]Exit shoot command
+[01.07.33.332015]Exit crouch
+[01.08.02.343158]Start shoot command
+[01.08.02.473196]Exit shoot command
+[01.08.03.362948]crouch
+[01.08.03.954965]Start shoot command
+[01.08.04.040200]Exit shoot command
+[01.08.04.687179]Exit crouch
+[01.08.04.970014]Start shoot command
+[01.08.05.113932]Exit shoot command
+[01.08.05.480309]Detected Player Damage
+[01.08.06.254023]Start shoot command
+[01.08.06.401937]Exit shoot command
+[01.08.07.223307]Start shoot command
+[01.08.07.406202]Exit shoot command
+[01.08.08.204259]Start shoot command
+[01.08.08.371505]Exit shoot command
+[01.08.08.713533]Detected Player Damage
+[01.08.09.782951]Start shoot command
+[01.08.09.904660]Exit shoot command
+[01.08.10.338572]crouch
+[01.08.10.739638]Start shoot command
+[01.08.10.842523]Exit shoot command
+[01.08.11.132727]Exit crouch
+[01.08.16.286978]Start shoot command
+[01.08.16.389369]Exit shoot command
+[01.08.16.412297]Detected Player Damage
+[01.08.16.469988]crouch
+[01.08.17.184174]Exit crouch
+[01.08.17.716662]Start shoot command
+[01.08.17.835399]Exit shoot command
+[01.08.17.950295]Detected Player Damage
+[01.08.18.372047]Start shoot command
+[01.08.18.481257]Exit shoot command
+[01.08.18.706333]Exit shoot command
+[01.08.18.892257]Start shoot command
+[01.08.18.960931]Exit shoot command
+[01.08.21.562063]Start shoot command
+[01.08.21.697190]Exit shoot command
+[01.08.22.217688]Start shoot command
+[01.08.22.347434]Exit shoot command
+[01.08.27.514056]Start shoot command
+[01.08.27.586014]Exit shoot command
+[01.08.27.788260]Exit shoot command
+[01.08.27.971206]Exit shoot command
+[01.08.28.057119]Start shoot command
+[01.08.28.172268]Exit shoot command
+[01.08.28.585113]Start shoot command
+[01.08.28.762053]Start shoot command
+[01.08.28.929115]Start shoot command
+[01.08.29.113370]Start shoot command
+[01.08.29.281275]Start shoot command
+[01.08.29.465169]Start shoot command
+[01.08.30.073134]Start shoot command
+[01.08.30.250035]Start shoot command
+[01.08.30.434645]Start shoot command
+[01.08.31.130053]Start shoot command
+[01.08.31.355245]Start shoot command
+[01.08.32.186244]crouch
+[01.08.32.664733]Start shoot command
+[01.08.32.889603]Start shoot command
+[01.08.33.112478]Exit crouch
+[01.08.33.394317]Start shoot command
+[01.08.42.316722]Start shoot command
+[01.08.42.450968]Exit shoot command
+[01.08.42.649166]Exit shoot command
+[01.08.44.738048]crouch
+[01.08.44.848441]Exit crouch
+[01.08.44.977551]crouch
+[01.08.45.489982]Exit crouch
+[01.08.45.932763]Start shoot command
+[01.08.46.034431]Exit shoot command
+[01.08.46.232770]Exit shoot command
+[01.08.46.264752]Detected Player Damage
+[01.08.46.424322]Exit shoot command
+[01.08.46.530096]Start shoot command
+[01.08.46.643302]Exit shoot command
+[01.08.46.947120]Detected Player Damage
+[01.08.50.601138]Start shoot command
+[01.08.50.721104]Exit shoot command
+[01.08.51.161989]Start shoot command
+[01.08.51.290055]Exit shoot command
+[01.08.53.058130]Start shoot command
+[01.08.53.120617]Exit shoot command
+[01.08.53.204571]Detected Player Damage
+[01.08.53.344489]crouch
+[01.08.53.960622]Start shoot command
+[01.08.54.018579]Exit shoot command
+[01.08.54.066551]Detected Player Damage
+[01.08.54.225475]Exit crouch
+[01.08.59.729293]Start shoot command
+[01.08.59.866235]Exit shoot command
+[01.09.00.217186]Exit shoot command
+[01.09.00.344114]Start shoot command
+[01.09.00.442058]Exit shoot command
+[01.09.00.657935]Exit shoot command
+[01.09.01.177690]Start shoot command
+[01.09.01.314611]Exit shoot command
+[01.09.01.857301]Start shoot command
+[01.09.02.018211]Exit shoot command
+[01.09.02.865354]Start shoot command
+[01.09.03.058243]Exit shoot command
+[01.09.03.976314]Start shoot command
+[01.09.04.106108]Exit shoot command
+[01.09.04.866289]crouch
+[01.09.05.400981]Start shoot command
+[01.09.05.489017]Exit shoot command
+[01.09.05.977180]Start shoot command
+[01.09.06.056154]Exit shoot command
+[01.09.06.264143]Exit crouch
+[01.09.54.245896]Start shoot command
+[01.09.54.410852]Exit shoot command
+[01.09.54.785246]Start shoot command
+[01.09.54.944067]Exit shoot command
+[01.09.57.210678]Start shoot command
+[01.09.57.448210]Exit shoot command
+[01.09.59.560261]Start shoot command
+[01.09.59.698925]Exit shoot command
+[01.09.59.728495]Detected Player Damage
+[01.09.59.761476]crouch
+[01.10.00.131031]Start shoot command
+[01.10.00.241680]Exit shoot command
+[01.10.00.247677]Detected Player Damage
+[01.10.00.432219]Exit crouch
+[01.10.02.033358]Start shoot command
+[01.10.02.152300]Exit shoot command
+[01.10.02.370166]Exit shoot command
+[01.10.03.171284]Start shoot command
+[01.10.03.377168]Exit shoot command
+[01.10.04.224478]crouch
+[01.10.04.545296]Exit crouch
+[01.10.05.058048]crouch
+[01.10.05.090096]Start shoot command
+[01.10.05.171451]Exit crouch
+[01.10.05.210398]Exit shoot command
+[01.10.07.104991]Start shoot command
+[01.10.07.241116]Exit shoot command
+[01.10.07.266110]Detected Player Damage
+[01.10.07.761162]crouch
+[01.10.08.841122]Exit crouch
+[01.10.09.024300]Start shoot command
+[01.10.09.138325]Exit shoot command
+[01.10.09.147319]Detected Player Damage
+[01.10.09.953187]crouch
+[01.10.10.114449]Exit crouch
