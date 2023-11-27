@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExtraLifeCollectable : CollectableDecorator
+public class ExtraLifeCollectable : MonoBehaviour
 {
-    public int numLives = 1;
+    public int numLives;
 
-    public override void Collect(Entity player)
-    {
-        //player.IncreaseNumLives(numLives);
+    public int GetLifeAmount(){ 
+        return numLives;
     }
 }
