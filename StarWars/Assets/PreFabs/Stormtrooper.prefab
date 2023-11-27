@@ -167,14 +167,9 @@ MonoBehaviour:
   shootingAni: {fileID: 7400000, guid: 82b29d3965d23c9408faa97abb3cadb6, type: 2}
   walkingAni: {fileID: 7400000, guid: ef3018e388e78ba49bd70c265529ed1a, type: 2}
   anim: {fileID: 2537613074878881111}
-<<<<<<< HEAD
-  bulletprefab: {fileID: 786341143510882769, guid: cee4b51902d574b49a609894feda7b7d, type: 3}
-  gunPosition: {fileID: 1777803195407927867}
-=======
   bulletprefab: {fileID: 786341143510882769, guid: b908ebfa1697ab24d819b9922f97cc71, type: 3}
   gunPosition: {fileID: 1777803195407927867}
   blastersound: {fileID: 5067988538212666466}
->>>>>>> main
 --- !u!114 &2797117548234172429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,8 +294,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
-<<<<<<< HEAD
-=======
 --- !u!82 &5067988538212666466
 AudioSource:
   m_ObjectHideFlags: 0
@@ -397,4 +390,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
->>>>>>> main

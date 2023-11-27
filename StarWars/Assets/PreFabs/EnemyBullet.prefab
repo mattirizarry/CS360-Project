@@ -147,12 +147,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.08, y: 0.03}
   m_EdgeRadius: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
---- !u!114 &6946957239454150029
-=======
 --- !u!114 &6956903297949871288
->>>>>>> main
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,8 +160,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 30
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> main
