@@ -52,10 +52,7 @@ public class Scores {
     }
 
     public override string ToString() {
-        return "\nPlayer Health: \t\t\t\t" + healthScore +
-                "\nCollectables Found: \t\t\t" + collectableScore +
-                "\nEnemies Defeated: \t\t\t" + enemyScore +
-                "\n\nLevel Score: \t\t\t\t" + totalScore;
+        return "Health Score: " + healthScore + "\nCollectable Score: " + collectableScore + "\nEnemy Score: " + enemyScore + "\nTotal Score: " + totalScore;
     }
 }
 
@@ -77,6 +74,7 @@ public class GameState
 
         int collectableScore = 10 * CollectablesCollected;
         int enemyScore = 50 * EnemiesDefeated;
+
         int healthScore;
 
         if (PlayerHealth < 0) {

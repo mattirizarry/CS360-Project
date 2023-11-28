@@ -954,9 +954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39d1c9a6061733244a71bcb625682697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FollowSpeed: 2
-  target: {fileID: 1803760586}
-  fixedYPosition: 8
+  playerTransform: {fileID: 1803760586}
 --- !u!1 &530487922
 GameObject:
   m_ObjectHideFlags: 0
@@ -116920,7 +116918,7 @@ PrefabInstance:
       objectReference: {fileID: 1803760598}
     - target: {fileID: 8440579815657872738, guid: 926e01452f061a448adc94ca1f2a01db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 8440579815657872738, guid: 926e01452f061a448adc94ca1f2a01db, type: 3}
       propertyPath: m_LocalPosition.y
