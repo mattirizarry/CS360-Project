@@ -2,6 +2,10 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
+<<<<<<< HEAD
+=======
+using UnityEngine.SceneManagement;
+>>>>>>> adb66ec9 (Initial commit.)
 
 public class GameManager : MonoBehaviour
 {
@@ -29,9 +33,6 @@ public class GameManager : MonoBehaviour
    {
         CurrentLevel = 1;
         StartLevel();
-        pauseMenuPanel.SetActive(false);
-        scorecardPanel.SetActive(false);
-        gameOverPanel.SetActive(false);
         PlayerHealth = 100;  //player.getHealth() or player.setHealth()
         PlayerLives = 1;     //player.getLives() or player.setLives()
         EnemiesDefeated = new Dictionary<string, int>();
@@ -44,8 +45,11 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+
             DontDestroyOnLoad(gameObject);
+
             gameData = new GameState(); // Initialize gameData here
+            playerPrefab = GameObject.Find("Luke");
         }
         else if (Instance != this)
         {
@@ -168,7 +172,7 @@ public class GameManager : MonoBehaviour
    
 
     public void QuitGame() {
-        //quit the game
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void TogglePause() {
