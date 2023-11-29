@@ -147,4 +147,8 @@ public class LoginManager : MonoBehaviour
             }
         } 
     }
+
+    public void ExitToDesktop() {
+        Application.Quit();
+    }
 }
