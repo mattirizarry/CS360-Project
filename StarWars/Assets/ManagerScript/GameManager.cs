@@ -2,10 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
-<<<<<<< HEAD
-=======
 using UnityEngine.SceneManagement;
->>>>>>> adb66ec9 (Initial commit.)
 
 public class GameManager : MonoBehaviour
 {

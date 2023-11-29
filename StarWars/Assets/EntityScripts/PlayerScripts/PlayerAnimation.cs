@@ -1,10 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-<<<<<<< HEAD
-using static UnityEditor.Searcher.SearcherWindow.Alignment;
-=======
->>>>>>> adb66ec9 (Initial commit.)
 
 public class PlayerAnimation : MonoBehaviour
 {
