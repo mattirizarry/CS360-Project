@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "795045470785",
+    "project_id": "wku-cs-360-project",
+    "storage_bucket": "wku-cs-360-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795045470785:android:36a27b3074a9a8b0385cc0",
+        "android_client_info": {
+          "package_name": "dev.irizarry"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlg9ibutzMsH2ckL4qmlhcsN4dWMMdy_I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
