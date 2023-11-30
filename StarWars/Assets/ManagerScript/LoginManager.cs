@@ -85,7 +85,7 @@ public class LoginManager : MonoBehaviour
             User = LoginTask.Result.User;
             Debug.LogFormat("User signed in successfully: {0} ({1})", User.DisplayName, User.Email);
             warningText.text = "";
-            confirmLoginText.text = "Login Successful!";
+            confirmLoginText.text = "Logged in as " + " (" + User.Email + ")";
 
         // redirect to the game scene  
 

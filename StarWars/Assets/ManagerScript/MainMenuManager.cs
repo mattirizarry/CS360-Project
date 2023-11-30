@@ -20,4 +20,15 @@ public class MainMenuManager : MonoBehaviour
     public void StartNewGame() {
         SceneManager.LoadScene("TutorialLevelScene");
     }
+
+    public void ExitGame() {
+        Application.Quit();
+    }
+
+    public void Logout() {
+        // log the user out of firebase
+        Firebase.Auth.FirebaseAuth.DefaultInstance.SignOut();
+
+        SceneManager.LoadScene("TitleScreen");
+    }
 }
